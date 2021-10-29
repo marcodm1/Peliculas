@@ -1,0 +1,24 @@
+.peliculita {
+    color: white;
+    list-style: none;
+    font-size: 25px;
+    text-align: center;
+}
+
+.peliculita:hover {
+    opacity: 0.8;
+}
+
+.portada {
+    border-radius: 15px;
+    background-color: dimgray;
+    width: 180px;
+    height: 280px;
+}
+
+@media (max-width: 560px) {
+    .portada {
+        width: 80%;
+        height: auto;
+    }
+}

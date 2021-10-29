@@ -1,0 +1,24 @@
+.elHeader {
+    background-color:rgb(41, 40, 40);
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elTitulo {
+    /* float: right; */
+    /* right: 6%; */
+}
+
+.losIconos {
+    
+}
+
+.elSearch {
+    /* float: left; */
+    /* float:inline-end; */
+}
+
+

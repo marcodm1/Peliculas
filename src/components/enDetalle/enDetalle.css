@@ -1,0 +1,51 @@
+.detallesPeli {
+    display:flex; /*pone al div como contenedor flex y a los hijos como flex item*/
+    justify-content:center;
+    align-items: center;
+}
+
+.descripcion {
+    width: 40%;
+    height: auto;
+}
+img {
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.tituloDetallado {
+    margin-top:0px;
+}
+
+p {
+    font-size: 15px;
+}
+
+strong {
+    font-size: 18px;
+    color: rgb(66, 66, 236);
+}
+
+@media (max-width: 710px) {
+    p {
+        font-size: 10px;
+    }
+    strong {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .detallesPeli {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    img {
+        width: 30%;
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+}

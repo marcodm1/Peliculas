@@ -1,0 +1,19 @@
+.titulo {
+    margin: 0px;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.titulo:hover {
+    opacity: 0.8;
+}
+
+
+/* ------------- mediaQuery --------------- */
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 20px;
+    }
+}

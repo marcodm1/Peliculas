@@ -1,0 +1,13 @@
+.stiloRejilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
+    gap: 20px; /* separacion de 40px entre elementos*/
+    padding: 30px;
+    justify-content: center; /* para centrar los elementos*/
+}
+
+@media (max-width: 560px) {
+    .stiloRejilla{
+        grid-template-columns: 100%;
+    }
+}
