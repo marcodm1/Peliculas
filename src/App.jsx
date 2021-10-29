@@ -4,29 +4,27 @@ import Titulo from './components/titulo/Titulo';
 import Search from './components/search/Search';
 import Peliculas from './components/peliculas/Peliculas';
 import EnDetalle from './components/enDetalle/EnDetalle';
-import Favoritos from './components/favoritos/Favoritos';
+import Login from  './components/login/Login';
+import Logout from './components/logout/Logout';
 import Perfil from './components/perfil/Perfil';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const App = () => {
+  const {isAuthenticated} = useAuth0();
     return (
     <>
     <Router>
-      sdfasfsd
       <div style={{display: 'flex', justifyContent: "space-Between"} }>
-        <Link to='/'> <Titulo/> </Link>
         <Search/>
+        <Link to='/'> <Titulo/> </Link>
         <div style={{display: 'flex'} }>
-          {/* <Login/> */}
-          <Perfil/>
-          <Link to='/favoritos'> <Favoritos/> </Link>
+          {isAuthenticated ? <><Perfil/><Logout/></> : <Login/>}
         </div>
         
       </div>
       <Switch>
         <Route exact path='/'> <Peliculas/> </Route>
         <Route exact path='/pelicula/:peliId'> <EnDetalle/> </Route>
-        <Route exact path='/favoritos'> <p>Estamos en favoritos</p> </Route>
-        {/* <Route exact path='/perfil'> <p>Estamos en el perfil</p> </Route> */}
         <Route path='/'> <br></br>Falta indicar en la dirección el número de la película deseada. Ejemplo pelicula/436969 </Route>
       </Switch>
     </Router>
