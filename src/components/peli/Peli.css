@@ -1,7 +1,7 @@
 .peliculita {
     color: white;
     list-style: none;
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -12,13 +12,13 @@
 .portada {
     border-radius: 15px;
     background-color: dimgray;
-    width: 180px;
-    height: 280px;
+    width: 126px;
+    height: 196px;
 }
 
 @media (max-width: 560px) {
     .portada {
-        width: 80%;
+        width: 50%;
         height: auto;
     }
 }

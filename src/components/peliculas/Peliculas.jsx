@@ -8,38 +8,31 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Peliculas = () => {
     const [peliculas, setPeliculas] = useState([]);
-    const [cargado, setCargado] = useState(true);
     const [pagina, setPagina] = useState(1);
     const [tieneMas, setTieneMas] = useState(true);
 
     const query = useQuery(); // esto captura la parte de la url despues de la ?
     const search = query.get('search');
+    const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
 
-    useEffect(() => {
-        setCargado(true);
-        const searchUrl = search 
-        ? '/search/movie?query=' + search  + '&page=' + pagina
-        : '/discover/movie?page=' + pagina;
+    useEffect(() => {        
         get(searchUrl).then(data => {
-            setPeliculas(prevPelis => prevPelis.concat(data.results)); // me añade las peliculas a las que tengo en
-            setTieneMas(data.page < data.total_pages);
-            setCargado(false);
-        });
-    }, [pagina]);
-
-    useEffect(() => {
-        setCargado(true);
-        const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
-        get(searchUrl).then(data => {
-            setPeliculas(data.results); // me añade las peliculas a las que tengo en
+            setPeliculas(data.results);
         });
     }, [search]);
+
+    const scroll = () => {
+        get(searchUrl).then(data => {
+            setPeliculas(prevPelis => prevPelis.concat(data.results)); 
+            setTieneMas(data.page < data.total_pages);
+        });
+    };
 
     return (
         <InfiniteScroll 
             dataLength={peliculas.length} 
             hasMore={tieneMas} 
-            next={() => setPagina((prevPage) => prevPage +1)}
+            next={scroll}
             loader={<Spinner/>}
         >
             <ul className="stiloRejilla">

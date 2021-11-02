@@ -1,8 +1,8 @@
 .stiloRejilla {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
-    gap: 20px; /* separacion de 40px entre elementos*/
-    padding: 30px;
+    grid-template-columns: repeat(auto-fill, 140px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
+    gap: 15px; /* separacion de 5px entre elementos*/
+    padding: 5px;
     justify-content: center; /* para centrar los elementos*/
 }
 
