@@ -25,7 +25,15 @@ const Peliculas = () => {
             setTieneMas(data.page < data.total_pages);
             setCargado(false);
         });
-    }, [search, pagina]);
+    }, [pagina]);
+
+    useEffect(() => {
+        setCargado(true);
+        const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
+        get(searchUrl).then(data => {
+            setPeliculas(data.results); // me añade las peliculas a las que tengo en
+        });
+    }, [search]);
 
     return (
         <InfiniteScroll 
