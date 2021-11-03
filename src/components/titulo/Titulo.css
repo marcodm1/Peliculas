@@ -1,8 +1,7 @@
 .titulo {
     margin: 0px;
-    font-size: 25px;
-    text-align: center;
-    margin-left: 25%;
+    font-size: 30px;
+    /* text-align: left; */
 }
 
 .titulo:hover {

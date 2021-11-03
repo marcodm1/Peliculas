@@ -6,14 +6,14 @@ import './Logout.css';
 // Tengo que poner un estado, para cuando este el usuario desconectado salga en el boton, logearse, y si esta 
 // logeado y entrada a su perfil, quie salga la informacion del perfil.
 
-const Logout = () => {
+const Logout = (props) => {
     const {logout} = useAuth0();
     // const [cargado, setCargado] = useState(true);
 
     return (
         <>
         <div className="logout">
-            <button onClick={() => logout({returnTo: window.location.origin})}>Desconectarse</button>
+            <button onClick={() => logout({returnTo: window.location.origin})}>{props.name}</button>
         </div>
         </>
     )

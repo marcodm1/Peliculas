@@ -1,19 +1,13 @@
-// import React , { useState } from 'react';
-// import React , { useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import './Login.css';
 
-// Tengo que poner un estado, para cuando este el usuario desconectado salga en el boton, logearse, y si esta 
-// logeado y entrada a su perfil, quie salga la informacion del perfil.
-
-const Login = () => {
+const Login = (props) => {
     const {loginWithRedirect, user} = useAuth0();
-    // const [cargado, setCargado] = useState(true);
 
     return (
         <>
         <div className="login">
-            <button onClick={() => loginWithRedirect()}>Conectarse</button>
+            <button onClick={() => loginWithRedirect()}>{props.name}</button>
         </div>
         {/* {JSON.stringify(user)} */}
         {/* {user.name} */}

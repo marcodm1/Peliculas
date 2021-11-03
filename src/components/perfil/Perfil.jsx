@@ -3,7 +3,6 @@ import './Perfil.css';
 
 const Perfil = () => {
     const {user, isAuthenticated, isloading} = useAuth0();
-    // const [cargado, setCargado] = useState(true);
 
     if (isloading) {
         return <div>Loading...</div>
@@ -12,9 +11,7 @@ const Perfil = () => {
     return (
         isAuthenticated && (
             <div>
-                <img src={user.picture} alt={user.name}/>
-                <h2>{user.name}</h2>
-                <p>Email: {user.email}</p>
+                <img className="fotoPerfil" src={user.picture} alt={user.name}/>
             </div>
         )
     )

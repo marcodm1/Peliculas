@@ -6,30 +6,49 @@ import Peliculas from './components/peliculas/Peliculas';
 import EnDetalle from './components/enDetalle/EnDetalle';
 import Login from  './components/login/Login';
 import Logout from './components/logout/Logout';
-import Perfil from './components/perfil/Perfil';
 import { useAuth0 } from '@auth0/auth0-react';
+import ErrorLink from './components/errores/errorLink/ErrorLink';
+import './App.css';
+
 
 const App = () => {
-  const {isAuthenticated} = useAuth0();
+    const {user, isAuthenticated, isloading} = useAuth0();
     return (
-    <>
-    <Router>
-      <div style={{display: 'flex', justifyContent: "space-Between"} }>
-        <Search/>
-        <Link to='/'> <Titulo/> </Link>
-        <div style={{display: 'flex'} }>
-          {isAuthenticated ? <><Perfil/><Logout/></> : <Login/>}
-        </div>
-        
-      </div>
-      <Switch>
-        <Route exact path='/'> <Peliculas/> </Route>
-        <Route exact path='/pelicula/:peliId'> <EnDetalle/> </Route>
-        <Route path='/'> <br></br>Falta indicar en la dirección el número de la película deseada. Ejemplo pelicula/436969 </Route>
-      </Switch>
-    </Router>
-    </>
-  );
+        <Router>
+            <div className="elEncabezado">
+                <div className="search">
+                    <Search/>
+                </div>
+                <div className="titulo">
+                    <Link to='/'> <Titulo/> </Link>
+                </div>
+                <div className="perfil">
+                    {isAuthenticated ? <><Logout name={user.name}/></> : <Login name="conectarse"/>}
+                </div>
+            </div>
+        <Switch>
+            <div className="elBody"> 
+                <div className="generos">
+                    <p>Géneros</p>
+                </div>
+                <div className="peliculas">
+                    {/* <Route exact path='/'> <Peliculas/> </Route> */}
+                    <p>peliculas</p>
+                </div>
+                <div className="sponsors">
+                    <p>Sponsors</p>
+                </div>
+            </div>
+
+            
+            {/* <Route exact path='/'> <Peliculas/> </Route> */}
+                <Route exact path='/pelicula/:peliId'> <EnDetalle/> </Route>
+                <Route exact path='/prueba/'> <Titulo/> </Route>
+                <Route path='/'> <ErrorLink/> </Route>
+                <Route path='/pelicula/'> <ErrorLink/> </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;

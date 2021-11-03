@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { get } from '../../funciones/httpClient';
 import Spinner from '../spinner/Spinner';
+import ErrorLink from '../errores/errorLink/ErrorLink';
 import './enDetalle.css';
 
 const EnDetalle = () => {
@@ -26,14 +27,17 @@ const EnDetalle = () => {
     }
     const imgUrl = "https://image.tmdb.org/t/p/w500" + pelicula.poster_path;
     return (
-        <div className="detallesPeli">
-            <img src={imgUrl} alt={pelicula.title} className="columna"/>
-            <div className="descripcion">
-                <p className="tituloDetallado"><strong>Titulo:</strong> {pelicula.title}</p>
-                <p><strong>Géneros:</strong> {pelicula.genres.map(objeto => objeto.name).join(", ")}</p>
-                <p><strong>Descripción:</strong> {pelicula.overview}</p>
+        pelicula.genres ? (
+            <div className="detallesPeli">
+                <img src={imgUrl} alt={pelicula.title} className="columna"/>
+                <div className="descripcion">
+                    <p className="tituloDetallado"><strong>Titulo:</strong> {pelicula.title}</p>
+                    <p><strong>Géneros:</strong> {pelicula.genres.map(objeto => objeto.name).join(", ")}</p>
+                    <p><strong>Descripción:</strong> {pelicula.overview}</p>
+                </div>
             </div>
-        </div>
+        ) :
+        <ErrorLink/>
     )
 }
 export default EnDetalle;

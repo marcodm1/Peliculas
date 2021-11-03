@@ -3,7 +3,7 @@ import './Titulo.css';
 
 const Titulo = () => {
     return (
-        <h1 className="titulo">Películas de Marco </h1>
+        <h1 className="titulo">Info-Pelis</h1>
     )
 }
 export default Titulo;

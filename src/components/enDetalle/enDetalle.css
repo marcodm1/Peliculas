@@ -2,6 +2,7 @@
     display:flex; /*pone al div como contenedor flex y a los hijos como flex item*/
     justify-content:center;
     align-items: center;
+    margin-top: 10%;
 }
 
 .descripcion {

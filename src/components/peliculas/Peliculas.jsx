@@ -7,38 +7,42 @@ import './Peliculas.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Peliculas = () => {
-    const [peliculas, setPeliculas] = useState([]);
-    const [pagina, setPagina] = useState(1);
-    const [tieneMas, setTieneMas] = useState(true);
+  const [peliculas, setPeliculas] = useState([]);
+  const [pagina, setPagina] = useState(1);
+  const [tieneMas, setTieneMas] = useState(true);
 
-    const query = useQuery(); // esto captura la parte de la url despues de la ?
-    const search = query.get('search');
-    const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
+  const query = useQuery(); // esto captura la parte de la url despues de la ?, Ej:si busco venom será: http://localhost:3000/?search=venom
+  const search = query.get('search'); // es lo que has puesto en el buscador: venom
+  const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
 
-    useEffect(() => {        
-        get(searchUrl).then(data => {
-            setPeliculas(data.results);
-        });
-    }, [search]);
+  useEffect(() => {        
+    get(searchUrl).then(data => {setPeliculas(data.results);});
+  }, [search]);
 
-    const scroll = () => {
-        get(searchUrl).then(data => {
-            setPeliculas(prevPelis => prevPelis.concat(data.results)); 
-            setTieneMas(data.page < data.total_pages);
-        });
-    };
+  const scroll = () => {
+    get(searchUrl).then(data => {
+      setPeliculas(prevPelis => prevPelis.concat(data.results));
+      setPagina(actual => actual +1);
+      setTieneMas(data.page < data.total_pages);
+    });
+  };
 
-    return (
-        <InfiniteScroll 
-            dataLength={peliculas.length} 
-            hasMore={tieneMas} 
-            next={scroll}
-            loader={<Spinner/>}
-        >
-            <ul className="stiloRejilla">
-                {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula}/> )}
-            </ul>
-        </InfiniteScroll>
-    )
+  // Fallos:
+  //  Empiezo con la pagina1 y cuando hago scroll me vuelve a cargar la 1 y de ahi las siguientes
+  //  Solo me cargan las primeras 20 peliculas, y como no son suficientes no hay scroll y no puedo ver mas
+  //  no se implementar mas divs de manera correcta por la pagina
+
+  return (
+    <InfiniteScroll 
+      dataLength={peliculas.length} 
+      hasMore={tieneMas} 
+      next={scroll}
+      loader={<Spinner/>}
+    >
+      <ul className="stiloRejilla">
+        {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula}/> )}
+      </ul>
+    </InfiniteScroll>
+  )
 }
 export default Peliculas;
