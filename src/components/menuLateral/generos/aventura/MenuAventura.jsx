@@ -1,9 +1,9 @@
 import './MenuAventura.css';
 
-const MenuAventura = () => {
+const MenuAventura = (props) => {
 
     return (
-        <p>MenuAventura</p>
+        <div className="MenuAventura" size={props}>Aventura</div>
     )
 }
 export default MenuAventura;

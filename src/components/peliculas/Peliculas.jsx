@@ -14,9 +14,10 @@ const Peliculas = () => {
   const query = useQuery(); // esto captura la parte de la url despues de la ?, Ej:si busco venom será: http://localhost:3000/?search=venom
   const search = query.get('search'); // es lo que has puesto en el buscador: venom
   const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
-
+  
   useEffect(() => {        
     get(searchUrl).then(data => {setPeliculas(data.results);});
+    setPagina(actual => actual +1); // no se si esto es lo mas correcto, pero funciona
   }, [search]);
 
   const scroll = () => {
@@ -27,10 +28,7 @@ const Peliculas = () => {
     });
   };
 
-  // Fallos:
-  //  Empiezo con la pagina1 y cuando hago scroll me vuelve a cargar la 1 y de ahi las siguientes
-  //  Solo me cargan las primeras 20 peliculas, y como no son suficientes no hay scroll y no puedo ver mas
-  //  no se implementar mas divs de manera correcta por la pagina
+
 
   return (
     <InfiniteScroll 

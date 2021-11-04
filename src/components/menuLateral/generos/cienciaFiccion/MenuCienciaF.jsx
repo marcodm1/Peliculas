@@ -1,8 +1,8 @@
 import './MenuCienciaF.css';
 
-const MenuCienciaF = () => {
+const MenuCienciaF = (props) => {
     return (
-        <p>MenuCienciaF</p>
+        <div className="MenuCienciaF" size={props}>Ciencia Ficción</div>
     )
 }
 export default MenuCienciaF;

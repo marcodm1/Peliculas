@@ -1,32 +1,32 @@
 .detallesPeli {
     display:flex; /*pone al div como contenedor flex y a los hijos como flex item*/
     justify-content:center;
-    align-items: center;
-    margin-top: 10%;
+    /* align-items: center; */
+    /* margin-top: 5%; */
 }
 
 .descripcion {
-    width: 40%;
+    width: 70%;
     height: auto;
 }
 img {
-    width: 20%;
+    width: 30%;
     height: auto;
     border-radius: 15px;
     margin-right: 20px;
 }
 
 .tituloDetallado {
-    margin-top:0px;
+    /* margin-top:0px; */
 }
 
 p {
-    font-size: 15px;
+    font-size: 25px;
 }
 
 strong {
-    font-size: 18px;
-    color: rgb(66, 66, 236);
+    font-size: 30px;
+    color: rgb(84, 194, 108);
 }
 
 @media (max-width: 710px) {

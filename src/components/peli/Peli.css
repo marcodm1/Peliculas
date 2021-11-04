@@ -14,8 +14,8 @@
 .portada {
     border-radius: 15px;
     background-color: dimgray;
-    width: 126px;
-    height: 196px;
+    width: 166px;
+    height: 258px;
 }
 
 @media (max-width: 560px) {

@@ -1,8 +1,11 @@
+// import { get } from '../../funciones/httpClient';
+// import { useQuery } from '../hooks/useQuery';
 import './MenuAccion.css';
-const MenuAccion = () => {
+
+const MenuAccion = (props) => {
 
     return (
-        <p>MenuAccion</p>
+        <div className="MenuAccion" size={props}>Acción</div>
     )
 }
 export default MenuAccion;
