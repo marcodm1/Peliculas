@@ -1,2 +1,8 @@
-.peliculita {
+.tituloMenu {
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+
+h2 {
+    color: rgb(84, 194, 108);
 }
