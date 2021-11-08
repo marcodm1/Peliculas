@@ -7,10 +7,24 @@ import EnDetalle from './components/enDetalle/EnDetalle';
 import Login from  './components/login/Login';
 import Logout from './components/logout/Logout';
 import { useAuth0 } from '@auth0/auth0-react';
-import GeneroTerror from './components/menuLateral/generos/terror/GeneroTerror';
-// import ErrorLink from './components/errores/errorLink/ErrorLink';
-// import ErrorPeli from './components/errores/errorPeli/ErrorPeli';
+// menu
+import MenuAccion from './components/menuLateral/generos/accion/MenuAccion';
+import MenuAnimacion from './components/menuLateral/generos/animacion/MenuAnimacion';
+import MenuAventura from './components/menuLateral/generos/aventura/MenuAventura';
+import MenuCienciaF from './components/menuLateral/generos/cienciaFiccion/MenuCienciaF';
+import MenuComedia from './components/menuLateral/generos/comedia/MenuComedia';
+import MenuCrimen from './components/menuLateral/generos/crimen/MenuCrimen';
+import MenuDrama from './components/menuLateral/generos/drama/MenuDrama';
+import MenuFantasia from './components/menuLateral/generos/fantasia/MenuFantasia';
+import MenuMisterio from './components/menuLateral/generos/misterio/MenuMisterio';
+import MenuMusical from './components/menuLateral/generos/musical/MenuMusical';
+import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
+import FormularioSponsor from './components/menuLateral/formularioSponsor/FormularioSponsor';
+
+// errores
+import ErrorLink from './components/errores/errorLink/ErrorLink';
+import ErrorPeli from './components/errores/errorPeli/ErrorPeli';
 import './App.css';
 
 const App = () => {
@@ -29,29 +43,31 @@ const App = () => {
                     {isAuthenticated ? <><Logout name={user.name}/></> : <Login name="conectarse"/>}
                 </div>
             </div>
-            {/* <Switch> */}
+            <Switch>
                 <div className="elBody"> 
                     <div className="zonaGeneros">
                         <MenuLateral size={size}/>
                     </div>
                     <div className="zonaPeliculas">
-                        {/* <Redirect from="/aventura" to="/caca" /> */}
                         <Route exact path='/pelicula/:peliId'> <EnDetalle/> </Route>
-                        <Route exact path='/accion'> pelis de acción </Route>
-                        <Route exact path='/aventura'> pelis de aventura </Route>
-                        <Route exact path='/cienciaFiccion'> pelis de cienciaFiccion </Route>
-                        <Route exact path='/drama'> pelis de drama </Route>
-                        <Route exact path='/fantasia'> pelis de fantasia </Route>
-                        <Route exact path='/musical'> pelis de musical </Route>
-                        <Route exact path='/suspense'> pelis de suspense </Route>
-                        {/* terror es el que estoy haciendo de pruebas */}
-                        <Route exact path='/terror'> <GeneroTerror/> </Route>
+                        <Route exact path='/accion'> <MenuAccion/> </Route>
+                        <Route exact path='/animacion'> <MenuAnimacion/> </Route>
+                        <Route exact path='/aventura'> <MenuAventura/> </Route>
+                        <Route exact path='/cienciaFiccion'> <MenuCienciaF/> </Route>
+                        <Route exact path='/comedia'> <MenuComedia/> </Route>
+                        <Route exact path='/crimen'> <MenuCrimen/> </Route>
+                        <Route exact path='/drama'> <MenuDrama/> </Route>
+                        <Route exact path='/fantasia'> <MenuFantasia/> </Route>
+                        <Route exact path='/misterio'> <MenuMisterio/> </Route>
+                        <Route exact path='/musical'> <MenuMusical/> </Route>
+                        <Route exact path='/terror'> <MenuTerror/> </Route>
+                        <Route exact path='/sponsors'> <FormularioSponsor/> </Route>
                         <Route exact path='/'> <Peliculas/> </Route>
 
-
-
+                        {/* cuando entro en /pelicula me carga los dos errores de abajo */}
                         {/* <Route path='/pelicula/'><ErrorLink/> </Route> */}
                         {/* <Route path='/'><ErrorPeli/> </Route> */}
+
                     </div>  
                     <div className="zonaSponsors">
                         <p>Sponsor: x</p>
@@ -59,7 +75,7 @@ const App = () => {
                     </div>
                 </div>
                 <Route exact path='/prueba/'> <Titulo/> </Route>
-            {/* </Switch> */}
+            </Switch>
         </Router>
     );
 }

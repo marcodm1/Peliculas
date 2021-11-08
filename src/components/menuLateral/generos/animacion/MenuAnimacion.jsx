@@ -1,22 +1,22 @@
 import React , { useEffect, useState } from 'react';
 import { get } from '../../../../funciones/httpClient';
-import Spinner from '../../../spinner/Spinner';
 import Peli from '../../../peli/Peli';
+import Spinner from '../../../spinner/Spinner';
 import { useQuery } from '../../../hooks/useQuery';
+import './MenuAnimacion.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import './GeneroTerror.css';
 
-const Peliculas = () => {
+const MenuAnimacion = () => {
   const [peliculas, setPeliculas] = useState([]);
   const [pagina, setPagina] = useState(1);
   const [tieneMas, setTieneMas] = useState(true);
 
   const query = useQuery(); // esto captura la parte de la url despues de la ?, Ej:si busco venom será: http://localhost:3000/?search=venom
   const search = query.get('search'); // es lo que has puesto en el buscador: venom
-  const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
-  
+  const searchUrl = '/discover/movie/?with_genres=16&sort_by=vote_average.desc&vote_count.gte=1000';
+
   useEffect(() => {        
-    get(searchUrl).then(data => {setPeliculas(data.results);});
+    get(searchUrl).then(data => { setPeliculas(data.results); });
     setPagina(actual => actual +1); // no se si esto es lo mas correcto, pero funciona
   }, [search]);
 
@@ -43,4 +43,4 @@ const Peliculas = () => {
     </InfiniteScroll>
   )
 }
-export default Peliculas;
+export default MenuAnimacion;
