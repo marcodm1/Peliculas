@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Titulo from './components/titulo/Titulo';
 import Search from './components/search/Search';
 import Peliculas from './components/peliculas/Peliculas';
@@ -23,12 +23,12 @@ import MenuLateral from './components/menuLateral/MenuLateral';
 import FormularioSponsor from './components/menuLateral/formularioSponsor/FormularioSponsor';
 
 // errores
-import ErrorLink from './components/errores/errorLink/ErrorLink';
-import ErrorPeli from './components/errores/errorPeli/ErrorPeli';
+// import ErrorLink from './components/errores/errorLink/ErrorLink';
+// import ErrorPeli from './components/errores/errorPeli/ErrorPeli';
 import './App.css';
 
 const App = () => {
-    const {user, isAuthenticated, isloading} = useAuth0();
+    const {user, isAuthenticated} = useAuth0();
     const size = 20;
     return (
         <Router>
@@ -70,8 +70,10 @@ const App = () => {
 
                     </div>  
                     <div className="zonaSponsors">
-                        <p>Sponsor: x</p>
-                        <img src='./' alt="sponsor"></img>
+                        <p>Sponsors:</p>
+                        <div className="sponsorAnuncio"><p>Espacio de cada sponsor</p></div>
+                        <div className="sponsorAnuncio"><p>Espacio de cada sponsor</p></div>
+                        <div className="sponsorAnuncio"><p>Espacio de cada sponsor</p></div>
                     </div>
                 </div>
                 <Route exact path='/prueba/'> <Titulo/> </Route>

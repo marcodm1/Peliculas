@@ -2,7 +2,24 @@
     margin-bottom: 6px;
     font-size: 22px;
 }
+.tituloMenu:hover {
+background-color: rgb(58, 99, 67);
+}
 
 h2 {
     color: rgb(84, 194, 108);
+}
+
+@media (max-width: 1250px) {
+    .tituloMenu {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 1050px) {
+    .tituloMenu {
+        font-size: 13px;
+    }
+
 }

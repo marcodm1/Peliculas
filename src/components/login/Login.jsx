@@ -2,15 +2,13 @@ import { useAuth0 } from '@auth0/auth0-react';
 import './Login.css';
 
 const Login = (props) => {
-    const {loginWithRedirect, user} = useAuth0();
+    const {loginWithRedirect} = useAuth0();
 
     return (
         <>
         <div className="login">
             <button onClick={() => loginWithRedirect()}>{props.name}</button>
         </div>
-        {/* {JSON.stringify(user)} */}
-        {/* {user.name} */}
         </>
     )
 }

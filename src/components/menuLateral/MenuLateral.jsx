@@ -21,7 +21,7 @@ const MenuLateral = (props) => {
     
         <h2>Contactos:</h2>
 
-        <Link to='/sponsors'> <Sponsors/> </Link>
+        <Link to='/sponsors'> <div className="tituloMenu"><Sponsors/></div> </Link>
         </>
     )
 }

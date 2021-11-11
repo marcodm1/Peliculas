@@ -37,7 +37,7 @@
     /* background-color: rgb(34, 35, 36); */
     /* border: 1px solid; */
     margin-left: 3%;
-    width: 15%;
+    width: 10%;
     padding: 1%;
 }
 .zonaPeliculas {
@@ -63,5 +63,28 @@
     margin-right: 3%;
     width: 15%;
     padding: 1%;
-    /* top: 7%; */
+}
+
+.sponsorAnuncio {
+    background-color: rgb(135, 143, 150);
+    margin: 5%;
+}
+.sponsorAnuncio:hover {
+    /* background-color: rgb(34, 35, 36); */
+    border: 1px solid white;
+}
+
+@media (max-width: 1250px) {
+    h2 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    h2 {
+        font-size: 15px;
+    }
+
 }
