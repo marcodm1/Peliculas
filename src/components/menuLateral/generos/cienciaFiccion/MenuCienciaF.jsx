@@ -5,6 +5,7 @@ import Spinner from '../../../spinner/Spinner';
 import { useQuery } from '../../../hooks/useQuery';
 import './MenuCienciaF.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import MenuOrden from '../../../menuOrden/MenuOrden';
 
 const MenuCienciaF = () => {
   const [peliculas, setPeliculas] = useState([]);
@@ -40,6 +41,7 @@ const MenuCienciaF = () => {
       next={scroll}
       loader={<Spinner/>}
     >
+      <MenuOrden/>
       <ul className="stiloRejilla">
         {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula}/> )}
       </ul>

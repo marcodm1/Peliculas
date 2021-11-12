@@ -6,6 +6,11 @@
     justify-content: center; /* para centrar los elementos*/
 }
 
+.descripcionBúsqueda {
+    text-align: center;
+    color: rgb(70, 151, 87);
+}
+
 @media (max-width: 560px) {
     .stiloRejilla{
         grid-template-columns: 100%;

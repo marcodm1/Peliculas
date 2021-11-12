@@ -5,6 +5,7 @@ import Spinner from '../../../spinner/Spinner';
 import { useQuery } from '../../../hooks/useQuery';
 import './MenuAnimacion.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import MenuOrden from '../../../menuOrden/MenuOrden';
 
 const MenuAnimacion = () => {
   const [peliculas, setPeliculas] = useState([]);
@@ -28,7 +29,7 @@ const MenuAnimacion = () => {
     });
   };
 
-
+  // const ordenadoVotos
 
   return (
     <InfiniteScroll 
@@ -37,6 +38,7 @@ const MenuAnimacion = () => {
       next={scroll}
       loader={<Spinner/>}
     >
+      <MenuOrden/>
       <ul className="stiloRejilla">
         {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula}/> )}
       </ul>

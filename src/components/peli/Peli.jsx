@@ -8,7 +8,7 @@ const Peli = ({pelicula}) => {
         <li className="peliculita"> 
             <Link to={'/pelicula/' + pelicula.id}>
                 <img className="portada" src={'imgUrl'} alt={pelicula.title}/>
-                <div>{pelicula.title + pelicula.video}</div> 
+                <div className="tituloPeli">{pelicula.title}</div> 
             </Link>
         </li>
     )

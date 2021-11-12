@@ -1,0 +1,7 @@
+.menuLateral {
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+    color: rgb(84, 194, 108);
+}

@@ -5,7 +5,9 @@ import Spinner from '../spinner/Spinner';
 import { useQuery } from '../hooks/useQuery';
 import './Peliculas.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import MenuOrden from '../menuOrden/MenuOrden';
 
+// no se si podre poner para que busque algo por cada letra introducida en el buscador
 const Peliculas = () => {
   const [peliculas, setPeliculas] = useState([]);
   const [pagina, setPagina] = useState(1);
@@ -37,7 +39,8 @@ const Peliculas = () => {
       next={scroll}
       loader={<Spinner/>}
     >
-      <div>Películas ordenadas de mas populares a menos populares</div>
+      <MenuOrden/>
+      {/* <div className="descripcionBúsqueda">Películas ordenadas de mayor a menor popularidad</div> */}
       <ul className="stiloRejilla">
         {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula}/> )}
       </ul>

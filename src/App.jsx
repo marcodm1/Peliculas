@@ -21,6 +21,8 @@ import MenuMusical from './components/menuLateral/generos/musical/MenuMusical';
 import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
 import FormularioSponsor from './components/menuLateral/formularioSponsor/FormularioSponsor';
+// menuOrden
+import MenuOrden from './components/menuOrden/MenuOrden';
 
 // errores
 // import ErrorLink from './components/errores/errorLink/ErrorLink';
@@ -49,6 +51,7 @@ const App = () => {
                         <MenuLateral size={size}/>
                     </div>
                     <div className="zonaPeliculas">
+                        {/* <MenuOrden/> */}
                         <Route exact path='/pelicula/:peliId'> <EnDetalle/> </Route>
                         <Route exact path='/accion'> <MenuAccion/> </Route>
                         <Route exact path='/animacion'> <MenuAnimacion/> </Route>
