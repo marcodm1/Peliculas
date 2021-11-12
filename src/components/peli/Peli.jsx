@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Peli.css';
-
+//hhhhhjghjghjghsdjjsd
 const Peli = ({pelicula}) => {
     const imgUrl = "https://image.tmdb.org/t/p/w300" + pelicula.poster_path;
     return ( 
