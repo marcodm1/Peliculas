@@ -22,7 +22,7 @@ import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
 import FormularioSponsor from './components/menuLateral/formularioSponsor/FormularioSponsor';
 // menuOrden
-import MenuOrden from './components/menuOrden/MenuOrden';
+// import MenuOrden from './components/menuOrden/MenuOrden';
 
 // errores
 // import ErrorLink from './components/errores/errorLink/ErrorLink';
@@ -68,8 +68,8 @@ const App = () => {
                         <Route exact path='/'> <Peliculas/> </Route>
 
                         {/* cuando entro en /pelicula me carga los dos errores de abajo */}
-                        {/* <Route path='/pelicula/'><ErrorLink/> </Route> */}
-                        {/* <Route path='/'><ErrorPeli/> </Route> */}
+                        {/* <Route path='/pelicula/'><ErrorLink/> </Route>
+                        <Route path='/'><ErrorPeli/> </Route> */}
 
                     </div>  
                     <div className="zonaSponsors">
@@ -87,6 +87,8 @@ const App = () => {
 
 export default App;
 
+//_________ https://trello.com/b/4o2BzD0t/proyecto ______________
+
 // ______________________ DUDAS__________________
 
     // EnDetalle: como puedo poner el fondo de de pantalla de cada peli con su propia foto ?
@@ -99,9 +101,9 @@ export default App;
 // ______________________ FALLOS__________________
 
     // Solo me cargan las primeras 20 peliculas, y como no son suficientes no hay scroll y no puedo ver mas
-    // App: supuestamente con switch solo me renderiza el primer Route pero no es asi
     // App: aunque ponga en orden de especificacion las rutas, me las coje todas
-    // en el Network del f12 me aparece un token que no se que es
+    // si relleno el form y lo envio se "reinicia" pero si le doy a enviar, se vuelven a cargar los datos
+
 // ______________________ MAS FUNCIONALIDAD__________________
 
     // añadir el contacto para posibles emails
