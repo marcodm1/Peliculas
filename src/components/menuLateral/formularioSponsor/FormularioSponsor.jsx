@@ -67,8 +67,18 @@ const FormularioSponsor = () => {
             />
             <div className="mensajeError">{ errors.dias &&  errors.dias.message }</div>
 
-            <div className="precio"> El precio total sería de: 0€/dia </div>
+            {/* código de la empresa */}
 
+            <input type="number" className="a" placeholder='Código de la empresa' name="codigo" 
+                {...register("codigo", {      
+                    required: { value: true, message: 'Introduzca el código de la empresa.' },
+                    minLength: { value: 15, message: 'Longitud del código tiene que contenet 15 números.' },
+                    maxLength: { value: 15, message: 'Longitud del código tiene que contenet 15 números.' }})
+                }  
+            />
+            <div className="mensajeError">{ errors.codigo &&  errors.codigo.message }</div>
+
+            <div className="precio"> El precio total sería de: 0€/dia </div>
             <ul>
                 { entradas.map(envio => 
                     <li key={envio.nombre}> {envio.nombre} - {envio.calle} - {envio.dias} </li>
