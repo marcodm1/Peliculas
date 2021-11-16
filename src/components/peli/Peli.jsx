@@ -7,7 +7,7 @@ const Peli = ({pelicula}) => {
     return ( 
         <li className="peliculita"> 
             <Link to={'/pelicula/' + pelicula.id}>
-                <img className="portada" src={'imgUrl'} alt={pelicula.title}/>
+                <img className="portada" src={imgUrl} alt={pelicula.title}/>
                 <div className="tituloPeli">{pelicula.title}</div> 
             </Link>
         </li>

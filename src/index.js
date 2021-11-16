@@ -10,7 +10,7 @@ import {Auth0Provider} from '@auth0/auth0-react';
 ReactDOM.render(
     // este proovedor va a almacenar el estado de la autenticacion de nuestros usuarios
     // a parte nos da metodos para conectarnos o desconectarnos
-    // y nos da un hook useAuth0
+    // y nos da un hook useAuth0 gfdgdgf
     <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin}>
         <App />
     </Auth0Provider>,
