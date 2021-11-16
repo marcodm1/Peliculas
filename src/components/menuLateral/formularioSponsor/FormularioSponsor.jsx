@@ -1,4 +1,3 @@
-// import { Fragment } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import './FormularioSponsor.css';
@@ -7,8 +6,6 @@ const FormularioSponsor = () => {
     
     // useForm recibe register la función y los errores
     const { register, handleSubmit, formState: {errors} } = useForm();
-
-    // aqui le vamos a poner el evento para el precio
         
     // const {register,handleSubmit, formState: { errors }} = useForm();
     const onsubmit = (data, evento) => {
@@ -26,15 +23,13 @@ const FormularioSponsor = () => {
     // aqui pongo el hook
     const [entradas, setEntradas] = useState([]);
 
-    // aqui voy a poner el hook dinamico para que el usuario vea cuanto va a pagar
-    // const onChange = (event) => {
-    //     precioDia: 100
-    //     precioTotal: 0
-    // }
-
     return(
         <>
         <h2 className="tituloFormulario"> Hazte sponsor!!</h2>
+
+        {/*entradas = {nombre: 'Pedro', direccion: 'calle 1', dias: '10', codigo: '123456789012345'}  */}
+        {/* da un error que lo muestra 2 veces en consola o que hace 2 veces el proceso */}
+        {console.log(entradas)}
 
         <form onSubmit={handleSubmit(onsubmit)}>
             
@@ -50,14 +45,14 @@ const FormularioSponsor = () => {
             <div className="mensajeError"> { errors.nombre &&  errors.nombre.message } </div>
             
             {/* direccion */}
-            <input  type="text" className="a" placeholder='Dirección de la empresa' name="calle" 
-                {...register("calle", {      
+            <input  type="text" className="a" placeholder='Dirección de la empresa' name="direccion" 
+                {...register("direccion", {      
                     required: { value: true, message: 'Introduzca la dirección de la empresa.' },
                     minLength: { value: 3, message: 'Introduzca mínimo 3 caractéres.' },
                     maxLength: { value: 40, message: 'Introduzca máximo 40 caractéres.' }})
                 }   
             />
-            <div className="mensajeError"> { errors.calle &&  errors.calle.message } </div>
+            <div className="mensajeError"> { errors.direccion &&  errors.direccion.message } </div>
             
             {/* dias que va a contratar */}
             <input type="number" className="a" placeholder='Días que va a contratar' name="dias" 
@@ -81,7 +76,7 @@ const FormularioSponsor = () => {
             <div className="precio"> El precio total sería de: 0€/dia </div>
             <ul>
                 { entradas.map(envio => 
-                    <li key={envio.nombre}> {envio.nombre} - {envio.calle} - {envio.dias} </li>
+                    <li key={envio.nombre}> {envio.nombre} - {envio.direccion} - {envio.dias} - {envio.codigo}</li>
                     ) 
                 }
             </ul>
@@ -90,28 +85,4 @@ const FormularioSponsor = () => {
         </>
     )
 }
-   
 export default FormularioSponsor;
-
-/*
-
-Lista de reglas de validación admitidas:
-
-required
-min
-max
-minLength
-maxLength
-pattern
-validate
-
-*/
-
-/*
-
-,
-                    minLength:{
-                        value: 3,
-                        message: 'Tiene que introducir el nombre con mas de 3 caractéres.' 
-                    }
-    */
