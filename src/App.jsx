@@ -4,8 +4,8 @@ import Titulo from './components/titulo/Titulo';
 import Search from './components/search/Search';
 import Peliculas from './components/peliculas/Peliculas';
 import EnDetalle from './components/enDetalle/EnDetalle';
-import Login from  './components/login/Login';
-import Logout from './components/logout/Logout';
+// import Login from  './components/login/Login';
+// import Logout from './components/logout/Logout';
 // import { useAuth0 } from '@auth0/auth0-react';
 // menu
 import MenuAccion from './components/menuLateral/generos/accion/MenuAccion';
@@ -72,10 +72,10 @@ const App = () => {
 
                     </div>  
                     <div className="zonaSponsors">
-                        <p>Sponsors:</p>
-                        <div className="sponsorAnuncio"><p>Espacio de cada sponsor</p></div>
-                        <div className="sponsorAnuncio"><p>Espacio de cada sponsor</p></div>
-                        <div className="sponsorAnuncio"><p>Espacio de cada sponsor</p></div>
+                        <p> Sponsors: </p>
+                        <div className="sponsorAnuncio"><p> Espacio de cada sponsor </p></div>
+                        <div className="sponsorAnuncio"><p> Espacio de cada sponsor </p></div>
+                        <div className="sponsorAnuncio"><p> Espacio de cada sponsor </p></div>
                     </div>
                 </div>
                 <Route exact path='/prueba/'> <Titulo/> </Route>
@@ -87,6 +87,7 @@ const App = () => {
 export default App;
 
 //_________ https://trello.com/b/4o2BzD0t/proyecto ______________
+//_________ http://marcodm.atwebpages.com/ ______________________
 
 // ______________________ DUDAS__________________
 
