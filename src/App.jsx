@@ -6,7 +6,7 @@ import Peliculas from './components/peliculas/Peliculas';
 import EnDetalle from './components/enDetalle/EnDetalle';
 import Login from  './components/login/Login';
 import Logout from './components/logout/Logout';
-import { useAuth0 } from '@auth0/auth0-react';
+// import { useAuth0 } from '@auth0/auth0-react';
 // menu
 import MenuAccion from './components/menuLateral/generos/accion/MenuAccion';
 import MenuAnimacion from './components/menuLateral/generos/animacion/MenuAnimacion';
@@ -30,8 +30,7 @@ import FormularioSponsor from './components/menuLateral/formularioSponsor/Formul
 import './App.css';
 
 const App = () => {
-    const {user, isAuthenticated} = useAuth0();
-    const size = 20;
+    // const {user, isAuthenticated} = useAuth0();
     return (
         <Router>
             <div className="zonaEncabezado">
@@ -41,14 +40,14 @@ const App = () => {
                 <div className="titulo">
                     <Link to='/'> <Titulo/> </Link>
                 </div>
-                <div className="perfil">
+                {/* <div className="perfil">
                     {isAuthenticated ? <><Logout name={user.name}/></> : <Login name="conectarse"/>}
-                </div>
+                </div> */}
             </div>
             <Switch>
                 <div className="elBody"> 
                     <div className="zonaGeneros">
-                        <MenuLateral size={size}/>
+                        <MenuLateral/>
                     </div>
                     <div className="zonaPeliculas">
                         {/* <MenuOrden/> */}
