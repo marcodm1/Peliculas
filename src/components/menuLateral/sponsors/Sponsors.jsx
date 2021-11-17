@@ -6,27 +6,31 @@ const Sponsors = () => {
     const [sponsors, setSponsors] = useState([]);
   
     useEffect(() => {        
-        fetch("http://marcodmapi.atwebpages.com/")
-            .then(resultado => resultado.json())
-            .then(
-                data => {setSponsors(data)}, 
-                error => setError(error) 
-            ) 
+        fetch('http://marcodmapi.atwebpages.com/', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+                // ,'Cache-Control': 'no-cache'
+            },
+            body: JSON.stringify(data),
+        })
+        .then(data => data.json())
+        .then(response => console.log(response));
     }, []);
 
-    // fetch('http://localhost:300/users')
-    //   .then(response => {
-    //     //do something with response
-    //     const users = response.json();
-    //     this.setState({ users })
-    //   })
-    //   .catch(err => {
-    //     throw new Error(err)
-    //   })
-      
+    // useEffect(() => {        
+    //     fetch("http://marcodmapi.atwebpages.com/")
+    //         .then(resultado => resultado.json())
+    //         .then(
+    //             data => {setSponsors(data)}, 
+    //             error => setError(error) 
+    //         ) 
+    // }, []);
+
     return (
         <>
-        <div className="sponsors">Sponsords</div>
+        <div className="sponsors">Sponsors</div>
         {console.log(sponsors)}
         {/* <ul>
             <p>{sponsors.map(sponsor => <li>{sponsors} </li>)}</p>
