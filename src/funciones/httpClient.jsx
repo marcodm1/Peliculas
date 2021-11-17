@@ -10,3 +10,10 @@ export function get(search)  {
     }).then((result) => result.json())
   )
 }
+
+export function getSponsors()  {
+  return (
+    fetch("/API/test.php")
+    .then((result) => result.json())
+  )
+}
