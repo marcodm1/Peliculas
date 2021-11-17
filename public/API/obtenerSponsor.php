@@ -1,6 +1,6 @@
 <?php
     include_once "cors.php";
-
+//gggg
     if (!isset($_GET['codigoEmpresa'])) {
         echo json_encode(null);
         exit;
