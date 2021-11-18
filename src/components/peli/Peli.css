@@ -3,19 +3,10 @@
     list-style: none;
     font-size: 15px;
     text-align: center;
-    /* z-index: 0; */
 }
 
-.peliculita:hover {
-    /* opacity: 0.8; */
-    /* border: white 1px solid; */
-    /* border-radius: 15px; */
-    /* color: rgb(58, 99, 67); */
-    
-}
 .tituloPeli:hover {
     color: rgb(58, 99, 67);
-    
 }
 
 .portada {

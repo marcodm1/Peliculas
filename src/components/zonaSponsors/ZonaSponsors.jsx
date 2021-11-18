@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
-import {getSponsors} from '../../../funciones/httpClient';
-import './Sponsors.css';
+import {getSponsors} from '../../funciones/httpClient';
+import './ZonaSponsors.css';
 
 const Sponsors = () => {
     const [sponsors, setSponsors] = useState([]);
@@ -11,8 +11,7 @@ const Sponsors = () => {
 
     return (
         <>
-        <div className="sponsors">Sponsorss</div>
-        {console.log(sponsors)}
+        {sponsors.map(sponsor => <div className="zonaSponsor">{sponsor.nombreEmpresa}</div>)}
         </>
     );
     

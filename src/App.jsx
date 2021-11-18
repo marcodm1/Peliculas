@@ -21,6 +21,7 @@ import MenuMusical from './components/menuLateral/generos/musical/MenuMusical';
 import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
 import FormularioSponsor from './components/menuLateral/formularioSponsor/FormularioSponsor';
+import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
 // menuOrden
 // import MenuOrden from './components/menuOrden/MenuOrden';
 
@@ -72,10 +73,7 @@ const App = () => {
 
                     </div>  
                     <div className="zonaSponsors">
-                        <p> Sponsors: </p>
-                        <div className="sponsorAnuncio"><p> Espacio de cada sponsor </p></div>
-                        <div className="sponsorAnuncio"><p> Espacio de cada sponsor </p></div>
-                        <div className="sponsorAnuncio"><p> Espacio de cada sponsor </p></div>
+                        <ZonaSponsors/>
                     </div>
                 </div>
                 <Route exact path='/prueba/'> <Titulo/> </Route>

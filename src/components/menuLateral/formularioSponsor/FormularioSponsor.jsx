@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import './FormularioSponsor.css';
 
 const FormularioSponsor = () => {
+
+    // aqui hacer que por cada campo, se guarde si es necesario
+    // const [] = useEffect([]);
     
     // useForm recibe register la función y los errores
     const { register, handleSubmit, formState: {errors} } = useForm();
@@ -27,13 +30,7 @@ const FormularioSponsor = () => {
         <>
         <h2 className="tituloFormulario"> Hazte sponsor!!</h2>
 
-        {/*entradas = {nombre: 'Pedro', direccion: 'calle 1', dias: '10', codigo: '123456789012345'}  */}
-        {/* da un error que lo muestra 2 veces en consola o que hace 2 veces el proceso */}
-        {console.log(entradas)}
-
         <form onSubmit={handleSubmit(onsubmit)}>
-            
-            {/* nombre */}
             <input type="text" className="a" placeholder='Nombre de la empresa' name="nombre" 
                 // no se porque no se puede poner eso como el type o className
                 {...register("nombre", { 
