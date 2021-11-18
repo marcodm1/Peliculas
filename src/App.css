@@ -2,6 +2,7 @@ html {
     background-color: #081229;
     font-family: Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 }
+
 /*________________________ encabezado _________________________ */
 .zonaEncabezado {
     position: fixed; 
@@ -10,9 +11,8 @@ html {
     margin-left: -7px;
     padding: 4px;
     width: 65.3%;
-    height: 40px;
-    border-radius: 5px;
-    background-color: rgb(50, 100, 61); 
+    height: 80px;
+    background-color: rgb(34, 59, 40); 
 }
 .search {
     position: fixed;
@@ -21,7 +21,7 @@ html {
 }
 .titulo {
     position: fixed;
-    left: 45%;
+    left: 42.5%;
     top: 0.8%
 }
 .perfil {
@@ -46,8 +46,6 @@ html {
     padding: 1%;
 }
 .zonaPeliculas {
-    /* background-color: rgb(34, 34, 36); */
-    /* border: 1px solid; */
     width: 70%;
     padding: 1%;
     margin-left: 15%;
@@ -61,8 +59,6 @@ html {
     position: fixed;
 }
 .zonaSponsors {
-    /* background-color: rgb(34, 35, 36); */
-    /* border: 1px solid; */
     position: fixed;
     right: -1%;
     margin-right: 3%;
@@ -71,11 +67,9 @@ html {
 }
 
 .sponsorAnuncio {
-    /* border: 1px solid white;     */
     margin: 5%;
 }
 .sponsorAnuncio:hover {
-    /* background-color: rgb(34, 35, 36); */
     border: 1px solid white;
 }
 
@@ -87,7 +81,6 @@ html {
 }
 
 @media (max-width: 1050px) {
-
     h2 {
         font-size: 15px;
     }
