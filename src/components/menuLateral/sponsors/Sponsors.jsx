@@ -11,7 +11,7 @@ const Sponsors = () => {
 
     return (
         <>
-        <div className="sponsors">Sponsorss</div>
+        <div className="sponsors">Sponsors</div>
         {console.log(sponsors)}
         </>
     );

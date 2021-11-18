@@ -5,21 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* z-index:2; */
 }
 
-.elTitulo {
-    /* float: right; */
-    /* right: 6%; */
-}
-
-.losIconos {
-    
-}
-
-.elSearch {
-    /* float: left; */
-    /* float:inline-end; */
-}
 
 

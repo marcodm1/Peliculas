@@ -1,11 +1,11 @@
 .titulo {
     margin: 0px;
-    font-size: 30px;
-    /* text-align: left; */
+    font-size: 50px;
+    text-align: center;
 }
 
 .titulo:hover {
-    opacity: 0.8;
+    color: rgb(58, 99, 67);
 }
 
 

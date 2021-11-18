@@ -20,7 +20,7 @@ import MenuMisterio from './components/menuLateral/generos/misterio/MenuMisterio
 import MenuMusical from './components/menuLateral/generos/musical/MenuMusical';
 import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
-import FormularioSponsor from './components/menuLateral/formularioSponsor/FormularioSponsor';
+import FormularioSponsor from './components/formularioSponsor/FormularioSponsor';
 import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
 // menuOrden
 // import MenuOrden from './components/menuOrden/MenuOrden';
