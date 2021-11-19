@@ -22,6 +22,7 @@ import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
 import FormularioSponsor from './components/formularioSponsor/FormularioSponsor';
 import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
+import Prueba2 from './components/prueba/Prueba2';
 // menuOrden
 // import MenuOrden from './components/menuOrden/MenuOrden';
 
@@ -73,6 +74,7 @@ const App = () => {
 
                     </div>  
                     <div className="zonaSponsors">
+                        <Prueba2/>
                         <ZonaSponsors/>
                     </div>
                 </div>

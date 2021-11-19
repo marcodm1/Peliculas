@@ -39,8 +39,20 @@
 
 
 /* ------------- mediaQuery --------------- */
-
+/* 
 @media (max-width: 600px) {
+    .searchInput {
+        height: 18px;
+        font-size: 15px;
+    }
+
+    .searchButton {
+        height: 29px;
+        top: 0px;
+    }
+} */
+
+@media (max-width: 1050px) {
     .searchInput {
         height: 18px;
         font-size: 15px;
