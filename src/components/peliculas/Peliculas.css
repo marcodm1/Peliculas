@@ -11,8 +11,23 @@
     color: rgb(70, 151, 87);
 }
 
-@media (max-width: 560px) {
-    .stiloRejilla{
-        grid-template-columns: 100%;
+@media (max-width: 1050px) {
+    .stiloRejilla {
+        grid-template-columns: repeat(auto-fill, 125px);
+        gap: 1px;
+    }
+}
+
+@media (max-width: 800px) {
+    .stiloRejilla {
+        grid-template-columns: repeat(auto-fill, 100px);
+        gap: 1px;
+    }
+}
+
+@media (max-width: 400px) {
+    .stiloRejilla {
+        grid-template-columns: repeat(auto-fill, 50px);
+        gap: 1px;
     }
 }

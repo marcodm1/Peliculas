@@ -4,6 +4,7 @@ import Titulo from './components/titulo/Titulo';
 import Search from './components/search/Search';
 import Peliculas from './components/peliculas/Peliculas';
 import EnDetalle from './components/enDetalle/EnDetalle';
+// usuario
 // import Login from  './components/login/Login';
 // import Logout from './components/logout/Logout';
 // import { useAuth0 } from '@auth0/auth0-react';
@@ -20,7 +21,9 @@ import MenuMisterio from './components/menuLateral/generos/misterio/MenuMisterio
 import MenuMusical from './components/menuLateral/generos/musical/MenuMusical';
 import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
+// formulario
 import FormularioSponsor from './components/formularioSponsor/FormularioSponsor';
+// sponsors
 import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
 import Prueba2 from './components/prueba/Prueba2';
 // menuOrden

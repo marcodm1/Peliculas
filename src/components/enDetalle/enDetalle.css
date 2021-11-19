@@ -23,7 +23,7 @@ strong {
     color: rgb(84, 194, 108);
 }
 
-@media (max-width: 710px) {
+@media (max-width: 800px) {
     p {
         font-size: 10px;
     }
@@ -32,7 +32,7 @@ strong {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     .detallesPeli {
         flex-direction: column;
         width: 100%;
@@ -40,7 +40,7 @@ strong {
 
     img {
         width: 30%;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         margin-right: 0px;
     }
 }

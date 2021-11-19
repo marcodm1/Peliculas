@@ -16,9 +16,31 @@
     height: 258px;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 1050px) {
     .portada {
-        width: 50%;
+        width: 116.46px;
+        height: 181.08px;
+    }
+    .peliculita {
+        font-size: 8px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .portada {
+        width: 93.1px;
+        height: 144.8px;
+    }
+    .peliculita {
+        font-size: 8px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .portada {
+        width: 83%;
         height: auto;
     }
 }
