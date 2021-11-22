@@ -14,11 +14,11 @@ const MenuAccion = () => {
 
   const query = useQuery(); // esto captura la parte de la url despues de la ?, Ej:si busco venom será: http://localhost:3000/?search=venom
   const search = query.get('search'); // es lo que has puesto en el buscador: venom
-  const searchUrl = '/discover/movie/?with_genres=28&sort_by=vote_average.desc&vote_count.gte=1000';
+  const searchUrl = '/discover/movie/?with_genres=28&sort_by=vote_average.desc&vote_count.gte=1000&page=' + pagina;
 
   useEffect(() => {        
     get(searchUrl).then(data => { setPeliculas(data.results); });
-    setPagina(actual => actual +1); // no se si esto es lo mas correcto, pero funciona
+    setPagina(pagina => pagina +1); // no funciona bien con cada menu
   }, [search]);
 
   const scroll = () => {

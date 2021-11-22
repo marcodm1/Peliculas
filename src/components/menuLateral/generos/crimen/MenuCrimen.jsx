@@ -14,7 +14,7 @@ const MenuCrimen = () => {
 
   const query = useQuery(); // esto captura la parte de la url despues de la ?, Ej:si busco venom será: http://localhost:3000/?search=venom
   const search = query.get('search'); // es lo que has puesto en el buscador: venom
-  const searchUrl = '/discover/movie/?with_genres=80&sort_by=vote_average.desc&vote_count.gte=1000';
+  const searchUrl = '/discover/movie/?with_genres=80&sort_by=vote_average.desc&vote_count.gte=1000&page=' + pagina;
 
   useEffect(() => {        
     get(searchUrl).then(data => { setPeliculas(data.results); });

@@ -14,7 +14,7 @@ const MenuAventura = () => {
 
   const query = useQuery(); // esto captura la parte de la url despues de la ?, Ej:si busco venom será: http://localhost:3000/?search=venom
   const search = query.get('search'); // es lo que has puesto en el buscador: venom
-  const searchUrl = '/discover/movie/?with_genres=12&sort_by=vote_average.desc&vote_count.gte=1000';
+  const searchUrl = '/discover/movie/?with_genres=12&sort_by=vote_average.desc&vote_count.gte=1000&page=' + pagina;
 
   // aqui ordena peliculas de mas votadas a menos votadas con un minimo de 20k de votos
   // const searchUrl = '/discover/movie/?sort_by=vote_average.desc&vote_count.gte=20000';

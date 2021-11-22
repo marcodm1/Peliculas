@@ -18,11 +18,8 @@ const Peliculas = () => {
   const searchUrl = search ? '/search/movie?query=' + search  + '&page=' + pagina : '/discover/movie?page=' + pagina;
   
   useEffect(() => {        
-    get(searchUrl).then(data => { 
-      setPeliculas(data.results);
-    });
+    get(searchUrl).then(data => { setPeliculas(data.results); });
     setPagina(actual => actual +1); // no se si esto es lo mas correcto, pero funciona
-    
   }, [search]);
 
   const scroll = () => {
