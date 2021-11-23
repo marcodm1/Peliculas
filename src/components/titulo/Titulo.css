@@ -7,18 +7,3 @@
 .titulo:hover {
     color: rgb(58, 99, 67);
 }
-
-
-/* ------------- mediaQuery --------------- */
-
-@media (max-width: 600px) {
-    .titulo {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 1050px) {
-    .titulo {
-        font-size: 30px;
-    }
-}

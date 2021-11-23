@@ -1,5 +1,6 @@
 .searchDiv {
-    position: relative;
+    /* position: relative; */
+
 }
 
 .searchInput {
@@ -26,43 +27,3 @@
 .searchButton:focus {
     border: 1px solid rgb(70, 90, 67);
 }
-
-/* ------------- mediaQuery --------------- */
-
-@media (max-width: 1050px) {
-    .searchInput {
-        margin-top: 2%;
-        height: 20px;
-        font-size: 15px;
-    }
-
-    .searchButton {
-        margin-top: 2%;
-        top: 0px;
-    }
-}
-
-@media (max-width: 800px) {
-    .searchInput {
-        height: 20px;
-        font-size: 15px;
-    }
-
-    .searchButton {
-        height: 29px;
-        top: 0px;
-    }
-}
-
-/* 
-@media (max-width: 780px) {
-    .searchInput {
-        height: 18px;
-        font-size: 15px;
-    }
-
-    .searchButton {
-        height: 29px;
-        top: 0px;
-    }
-} */

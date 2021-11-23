@@ -6,11 +6,11 @@ html {
 /*________________________ encabezado _________________________ */
 .zonaEncabezado {
     position: fixed; 
-    right: 19%;
+    /* right: 20%; */
     margin-top: -8px;
     margin-left: -7px;
     padding: 4px;
-    width: 65.3%;
+    width: 100%;
     height: 7%;
     background-color: #081229; 
 }
@@ -21,7 +21,7 @@ html {
 }
 .titulo {
     position: fixed;
-    left: 42.5%;
+    left: 42%;
     top: 0.8%
 }
 .perfil {
@@ -34,13 +34,11 @@ html {
 .elBody {
     display: flex;
     justify-content: space-between;
-    padding-top: 3%;
+    padding-top: 5%;
     background-color: #081229;
 }
 .zonaGeneros {
     position: fixed;
-    /* background-color: rgb(34, 35, 36); */
-    /* border: 1px solid; */
     margin-left: 3%;
     width: 10%;
     padding: 1%;
@@ -86,9 +84,39 @@ html {
     .zonaSponsors {
         right: 5%;
     }
+    .search {
+        position: fixed;
+        left: 13%;
+    }
+    .titulo {
+        left: 42%;
+        top: 0.8%
+    }
+    .searchButton {
+        margin-top: 3.5%;
+        top: 10%;
+    }
+    .area {
+        font-size: 15px;
+        width: 45%;
+        padding: 9px;
+        margin: 9px;
+        display: inline-block;
+        border: 2px solid rgb(58, 99, 67);
+        border-radius: 10px;
+    }
+    .botonEnvio {
+        font-size: 15px;
+        margin-top: 9px;
+        padding-right: 9px;
+    }
 }
 
 @media (max-width: 1050px) {
+    .titulo {
+        font-size: 30px;
+        right: 40%
+    }
     h2 {
         font-size: 15px;
     }
@@ -101,17 +129,32 @@ html {
     .zonaSponsors {
         right: 5%;
     }
+    .titulo {
+        position: fixed;
+        left: 44%;
+        top: 0.8%;
+        right: auto;
+    }
+    .search {
+        position: fixed;
+        left: 42%;
+        top: 4%;
+    }
+    .searchInput {
+        height: 20px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 800px) {
     .search {
         position: fixed;
-        left: 35%;
+        left: 37%;
         top: 4%
     }
     .titulo {
         position: fixed;
-        left: 39%;
+        left: 41%;
         top: 0.8%
     }
     .elBody {
@@ -123,21 +166,49 @@ html {
     .zonaSponsors {
         right: 5%;
     }
+    .area {
+        font-size: 10px;
+        padding: 10px;
+    }
+    .botonEnvio {
+        font-size: 11px;
+        margin-top: 3px;
+        padding-right: 7px;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 20px;
+    }
+    .elBody {
+        padding-top: 12%;
+    }
+    .searchInput {
+        font-size: 10px;
+    }
+    .area {
+        font-size: 10px;
+        padding: 7px;
+    }
+    .botonEnvio {
+        font-size: 10px;
+        padding-right: 7px;
+    }
 }
 
 @media (max-width: 400px) {
     .search {
-        position: fixed;
-        left: 25%;
-        top: 5%
+        left: 38%;
+        top: 3%
     }
     .titulo {
         position: fixed;
-        left: 33%;
+        left: 39%;
         top: 0.8%
     }
     .elBody {
-        padding-top: 16%;
+        padding-top: 23%;
     }
     .zonaGeneros {
         position: fixed;
@@ -153,5 +224,8 @@ html {
     }
     .zonaSponsors {
         right: 5%;
+    }
+    .searchInput {
+        font-size: 7px;
     }
 }
