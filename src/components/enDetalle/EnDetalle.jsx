@@ -29,12 +29,14 @@ const EnDetalle = () => {
     return (
         pelicula.genres ? (
             <>
+            {/* <div className="detallesPeli" style={{backgroundImage: `url(${imgUrl})`}}> */}
             <div className="detallesPeli">
                 <img src={imgUrl} alt={pelicula.title} className="columna"/>
                 <div className="descripcion">
-                    <p><strong>Nota: </strong> {pelicula.vote_average}</p>
-                    <p><strong>Valoraciones:</strong> {pelicula.vote_count}</p>
-                    <p className="tituloDetallado"><strong>Titulo:</strong> {pelicula.title}</p>
+                    <p className="pStrong"><strong>Nombre: </strong> {pelicula.title}</p>
+                    <p className="pStrong"><strong>Nota: </strong> {pelicula.vote_average}</p>
+                    <p className="pStrong"><strong>Valoraciones:</strong> {pelicula.vote_count}</p>
+                    <p className="pStrong"><strong>Titulo:</strong> {pelicula.title}</p>
                     <p><strong>Géneros:</strong> {pelicula.genres.map(objeto => objeto.name).join(", ")}</p>
                     <p><strong>Descripción:</strong> {pelicula.overview}</p>
                 </div>

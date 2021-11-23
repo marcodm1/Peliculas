@@ -1,6 +1,9 @@
 .detallesPeli {
     display:flex; /*pone al div como contenedor flex y a los hijos como flex item*/
     justify-content:center;
+    border-radius: 15px;
+    opacity: 0.8;
+    margin-top: 2%;
 }
 
 .descripcion {
@@ -8,7 +11,7 @@
     height: auto;
 }
 img {
-    width: 30%;
+    width: 60%;
     height: auto;
     border-radius: 15px;
     margin-right: 20px;
@@ -19,28 +22,57 @@ p {
 }
 
 strong {
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(84, 194, 108);
 }
 
-@media (max-width: 800px) {
-    p {
-        font-size: 10px;
-    }
+@media (max-width: 1250px) {
     strong {
-        font-size: 13px;
+        font-size: 20px;
+    }
+    p {
+        font-size: 17px;
     }
 }
 
+@media (max-width: 1050px) {
+    strong {
+        font-size: 17px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    strong {
+        font-size: 14px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .detallesPeli {
+        margin-left: 6%;
+        margin-top: 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .detallesPeli {
+        flex-direction: column;
+        width: 100%;
+    }
+    .detallesPeli {
+        margin-left: 25%;
+        margin-top: 12%;
+    }  
+
+}
 @media (max-width: 400px) {
     .detallesPeli {
         flex-direction: column;
         width: 100%;
     }
+ 
 
-    img {
-        width: 30%;
-        margin-bottom: 0px;
-        margin-right: 0px;
-    }
 }

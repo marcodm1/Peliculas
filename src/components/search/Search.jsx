@@ -24,7 +24,7 @@ const Search = () => {
     <form className="searchForm" onSubmit={handleSubmit}>
       <div className='searchDiv'>
         <input className='searchInput' type="text" placeholder="Buscar" value={searchText} onChange={(evento) => setSearchText(evento.target.value)}/>
-        <button className='searchButton' type='submit'>{<FaSearch size={20}/>}</button>
+        <button className='searchButton' type='submit'>{<FaSearch size={15}/>}</button>
       </div>
     </form>
   )

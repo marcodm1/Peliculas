@@ -16,7 +16,7 @@ html {
 }
 .search {
     position: fixed;
-    left: 17%;
+    left: 16%;
     top: 1%
 }
 .titulo {
@@ -81,9 +81,6 @@ html {
     .zonaPeliculas {
         margin-left: 20%;
     }
-    .zonaSponsors {
-        right: 5%;
-    }
     .search {
         position: fixed;
         left: 13%;
@@ -93,7 +90,7 @@ html {
         top: 0.8%
     }
     .searchButton {
-        margin-top: 3.5%;
+        margin-top: 6%;
         top: 10%;
     }
     .area {
@@ -109,6 +106,9 @@ html {
         font-size: 15px;
         margin-top: 9px;
         padding-right: 9px;
+    }
+    strong {
+        font-size: 20px;
     }
 }
 
@@ -126,9 +126,6 @@ html {
     .zonaPeliculas {
         margin-left: 22%;
     }
-    .zonaSponsors {
-        right: 5%;
-    }
     .titulo {
         position: fixed;
         left: 44%;
@@ -140,10 +137,14 @@ html {
         left: 42%;
         top: 4%;
     }
+    .searchButton {
+        margin-top: 4.7%;
+    }
     .searchInput {
         height: 20px;
         font-size: 14px;
     }
+
 }
 
 @media (max-width: 800px) {
@@ -164,7 +165,6 @@ html {
         margin-left: 18%;
     }
     .zonaSponsors {
-        right: 4%;
         font-size: 15px;
         padding: 0;
     }
@@ -177,6 +177,9 @@ html {
         margin-top: 3px;
         padding-right: 7px;
     }
+    .searchInput {
+        height: 17px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -188,6 +191,7 @@ html {
     }
     .searchInput {
         font-size: 10px;
+        padding: 0;
     }
     .area {
         font-size: 10px;
@@ -201,12 +205,15 @@ html {
         font-size: 12px;
         padding: 0;
     }
+    .searchButton {
+        margin-top: 4%;
+    }
 }
 
 @media (max-width: 400px) {
     .search {
         left: 38%;
-        top: 3%
+        top: 4%
     }
     .titulo {
         position: fixed;
@@ -229,10 +236,13 @@ html {
         margin-left: 18%;
     }
     .zonaSponsors {
-        right: 5%;
         font-size: 10px;
     }
     .searchInput {
-        font-size: 7px;
+        height: 13px;
+        width: 95px;
+    }
+    .searchButton {
+        display: none;
     }
 }
