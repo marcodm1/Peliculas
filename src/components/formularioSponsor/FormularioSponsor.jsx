@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react/cjs/react.development";
+// import { useEffect } from "react/cjs/react.development";
 import { getGet } from "../../funciones/httpClient";
 import './FormularioSponsor.css';
 
@@ -10,35 +10,26 @@ const FormularioSponsor = () => {
     const [nombre, setNombre] = useState();
 
     const onsubmit = (data, evento) => {
-        evento.target.reset(); //borra los campos rellenados
-        // poner un mensaje de enviado correctamente
-
-        // aqui añadimos el objeto con toda la info 
+        evento.target.reset(); 
         setEntradas([
             ...entradas, data
         ])
-    }
 
-    useEffect(() => {
-        const persona = {
-            nombre: "Marco", 
-            apellido: "Dominguez"
-          };
-          const obj = JSON.stringify(persona);
-        getGet(obj)
-        .then(data => { setNombre(data); });
-        setNombre(actual => actual +1); // no se si esto es lo mas correcto, pero funciona
-    }, [entradas]);
+        
+        // getGet()
+        // .then(data => { setNombre(data.nombre); });
+        // setNombre(actual => actual +1); // no se si esto es lo mas correcto, pero funciona
+
+    }
 
     return(
         <>
         <h2 className="tituloFormulario"> Hazte sponsor!!</h2>
-        {/* {console.log(entradas)} */}
-        {console.log(nombre)}
-        <p>nombre = {nombre}</p>
+        {/* {console.log(nombre)} */}
+        {/* <p>nombre = {nombre}</p> */}
         <form onSubmit={handleSubmit(onsubmit)}>
+            {/* nombre de la empresa */}
             <input type="text" className="a" placeholder='Nombre de la empresa' name="nombre" 
-                // no se porque no se puede poner eso como el type o className
                 {...register("nombre", { 
                     required: { value: true, message: 'Introduzca el Nombre de la empresa.' },
                     minLength: { value: 3, message: 'Introduzca mínimo 3 caractéres.' },

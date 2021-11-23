@@ -4,7 +4,7 @@ header('Content-type: application/json');
     $host = 'fdb34.awardspace.net';
     $dbname = '3986739_marcobd';
     $usuario = '3986739_marcobd';
-    $contrasenia = '%v9Eys].9hLj1?%Y';
+    $contrasenia = '12mdmcpsok';
     // falta poner los datos de las variables de entorno
     try { 
         try {
