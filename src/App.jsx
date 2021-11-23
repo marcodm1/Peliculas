@@ -25,7 +25,7 @@ import MenuLateral from './components/menuLateral/MenuLateral';
 import FormularioSponsor from './components/formularioSponsor/FormularioSponsor';
 // sponsors
 import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
-import Prueba2 from './components/prueba/Prueba2';
+// import Prueba2 from './components/prueba/Prueba2';
 // menuOrden
 // import MenuOrden from './components/menuOrden/MenuOrden';
 
@@ -77,7 +77,7 @@ const App = () => {
 
                     </div>  
                     <div className="zonaSponsors">
-                        <Prueba2/>
+                        {/* <Prueba2/> */}
                         <ZonaSponsors/>
                     </div>
                 </div>

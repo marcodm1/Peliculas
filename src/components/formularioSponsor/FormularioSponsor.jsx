@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useEffect } from "react/cjs/react.development";
+import { getGet } from "../../funciones/httpClient";
 import './FormularioSponsor.css';
 
 const FormularioSponsor = () => {
     const [entradas, setEntradas] = useState([]);
     const { register, handleSubmit, formState: {errors} } = useForm();
+    const [nombre, setNombre] = useState();
 
     const onsubmit = (data, evento) => {
         evento.target.reset(); //borra los campos rellenados
@@ -15,28 +18,24 @@ const FormularioSponsor = () => {
             ...entradas, data
         ])
     }
-    // useEffect(() => {  
-        // const entradas = JSON.stringify(entradas);
-        // const api = 'http://marcodm.atwebpages.com/API/test2.php';
-        // request = new XMLHttpRequest();
-        // request.open("POST", api, true);
-        // request.setRequestHeader("Content-type", "application/json");
-        // request.send(entradas); 
 
-        // entradas = {nombre: '123', direccion: '123', dias: '123', codigo: '123213123123123'}
-        // mi api de bd, http://marcodm.atwebpages.com/API/test.php 
-        // const respuesta = fetch(`${api}`, {
-        //     method: "POST",
-        //     body: entradas,
-        // });
-    // }, []);
-
-    // aqui pongo el hook
+    useEffect(() => {
+        const persona = {
+            nombre: "Marco", 
+            apellido: "Dominguez"
+          };
+          const obj = JSON.stringify(persona);
+        getGet(obj)
+        .then(data => { setNombre(data); });
+        setNombre(actual => actual +1); // no se si esto es lo mas correcto, pero funciona
+    }, [entradas]);
 
     return(
         <>
         <h2 className="tituloFormulario"> Hazte sponsor!!</h2>
-        {console.log(entradas)}
+        {/* {console.log(entradas)} */}
+        {console.log(nombre)}
+        <p>nombre = {nombre}</p>
         <form onSubmit={handleSubmit(onsubmit)}>
             <input type="text" className="a" placeholder='Nombre de la empresa' name="nombre" 
                 // no se porque no se puede poner eso como el type o className
