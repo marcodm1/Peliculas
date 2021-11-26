@@ -18,21 +18,21 @@ export function getSponsors()  {
   )
 }
 
-// export function getGet()  {
-//   // const cargaUtil = JSON.stringify(this.state.videojuego);
-//   // // ¡Y enviarlo!
-//   // const respuesta = await fetch(`${Constantes.RUTA_API}/guardar_videojuego.php`, {
-//   //     method: "POST",
-//   //     body: cargaUtil,
-//   // });
+export function getGet()  {
+  // const cargaUtil = JSON.stringify(this.state.videojuego);
+  // // ¡Y enviarlo!
+  // const respuesta = await fetch(`${Constantes.RUTA_API}/guardar_videojuego.php`, {
+  //     method: "POST",
+  //     body: cargaUtil,
+  // });
 
-//   const persona = {
-//     nombre: "Marco", 
-//     apellido: "Dominguez"
-//   };
-//   const obj = JSON.stringify(persona);
-//   return (
-//     fetch('http://marcodm.atwebpages.com/API/test2.php?x=' + obj)
-//     .then((result) => result.json())
-//   )
-// }
+  const persona = {
+    nombre: "Marco", 
+    apellido: "Dominguez"
+  };
+  const obj = JSON.stringify(persona);
+  return (
+    fetch('API/test2.php?x=' + obj)
+    .then((result) => result.json())
+  )
+}

@@ -12,7 +12,9 @@ ReactDOM.render(
     // a parte nos da metodos para conectarnos o desconectarnos
     // y nos da un hook useAuth0 gfdgdgf
     // <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin}>
-        <App />,
+    <React.StrictMode>
+        <App />
+    </React.StrictMode> ,
     // </Auth0Provider>,
     document.getElementById('root')
 );

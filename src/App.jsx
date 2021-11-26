@@ -1,13 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// mi App
 import Titulo from './components/titulo/Titulo';
 import Search from './components/search/Search';
 import Peliculas from './components/peliculas/Peliculas';
 import EnDetalle from './components/enDetalle/EnDetalle';
-// usuario
-// import Login from  './components/login/Login';
-// import Logout from './components/logout/Logout';
-// import { useAuth0 } from '@auth0/auth0-react';
 // menu
 import MenuAccion from './components/menuLateral/generos/accion/MenuAccion';
 import MenuAnimacion from './components/menuLateral/generos/animacion/MenuAnimacion';
@@ -22,10 +19,9 @@ import MenuMusical from './components/menuLateral/generos/musical/MenuMusical';
 import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
 // formulario
-import FormularioSponsor from './components/formularioSponsor/FormularioSponsor';
+import ListaSponsors from './components/formularioSponsor/ListaSponsors';
 // sponsors
 import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
-// import Prueba2 from './components/prueba/Prueba2';
 // menuOrden
 // import MenuOrden from './components/menuOrden/MenuOrden';
 
@@ -35,53 +31,46 @@ import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
 import './App.css';
 
 const App = () => {
-    // const {user, isAuthenticated} = useAuth0();
     return (
         <Router>
             <div className="zonaEncabezado">
                 <div className="search">
-                    <Search/>
+                    <Search />
                 </div>
                 <div className="titulo">
-                    <Link to='/'> <Titulo/> </Link>
+                    <Link to='/'> <Titulo /> </Link>
                 </div>
-                {/* <div className="perfil">
-                    {isAuthenticated ? <><Logout name={user.name}/></> : <Login name="conectarse"/>}
-                </div> */}
             </div>
             <Switch>
-                <div className="elBody"> 
+                <div className="elBody">
                     <div className="zonaGeneros">
-                        <MenuLateral/>
+                        <MenuLateral />
                     </div>
                     <div className="zonaPeliculas">
                         {/* <MenuOrden/> */}
-                        <Route exact path='/pelicula/:peliId'> <EnDetalle/> </Route>
-                        <Route exact path='/accion'> <MenuAccion/> </Route>
-                        <Route exact path='/animacion'> <MenuAnimacion/> </Route>
-                        <Route exact path='/aventura'> <MenuAventura/> </Route>
-                        <Route exact path='/cienciaFiccion'> <MenuCienciaF/> </Route>
-                        <Route exact path='/comedia'> <MenuComedia/> </Route>
-                        <Route exact path='/crimen'> <MenuCrimen/> </Route>
-                        <Route exact path='/drama'> <MenuDrama/> </Route>
-                        <Route exact path='/fantasia'> <MenuFantasia/> </Route>
-                        <Route exact path='/misterio'> <MenuMisterio/> </Route>
-                        <Route exact path='/musical'> <MenuMusical/> </Route>
-                        <Route exact path='/terror'> <MenuTerror/> </Route>
-                        <Route exact path='/sponsors'> <FormularioSponsor/> </Route>
-                        <Route exact path='/'> <Peliculas/> </Route>
-
-                        {/* cuando entro en /pelicula me carga los dos errores de abajo */}
+                        <Route exact path='/pelicula/:peliId'> <EnDetalle /> </Route>
+                        <Route exact path='/accion'> <MenuAccion /> </Route>
+                        <Route exact path='/animacion'> <MenuAnimacion /> </Route>
+                        <Route exact path='/aventura'> <MenuAventura /> </Route>
+                        <Route exact path='/cienciaFiccion'> <MenuCienciaF /> </Route>
+                        <Route exact path='/comedia'> <MenuComedia /> </Route>
+                        <Route exact path='/crimen'> <MenuCrimen /> </Route>
+                        <Route exact path='/drama'> <MenuDrama /> </Route>
+                        <Route exact path='/fantasia'> <MenuFantasia /> </Route>
+                        <Route exact path='/misterio'> <MenuMisterio /> </Route>
+                        <Route exact path='/musical'> <MenuMusical /> </Route>
+                        <Route exact path='/terror'> <MenuTerror /> </Route>
+                        <Route exact path='/sponsors'> <ListaSponsors /> </Route>
+                        <Route exact path='/'> <Peliculas /> </Route>
+                        {/* errores */}
                         {/* <Route path='/pelicula/'><ErrorLink/> </Route>
                         <Route path='/'><ErrorPeli/> </Route> */}
-
-                    </div>  
+                    </div>
                     <div className="zonaSponsors">
-                        {/* <Prueba2/> */}
-                        <ZonaSponsors/>
+                        <ZonaSponsors />
                     </div>
                 </div>
-                <Route exact path='/prueba/'> <Titulo/> </Route>
+                <Route exact path='/prueba/'> <Titulo /> </Route>
             </Switch>
         </Router>
     );
@@ -89,45 +78,27 @@ const App = () => {
 
 export default App;
 
-//_________ https://trello.com/b/4o2BzD0t/proyecto ______________
-
-//_________ http://marcodm.atwebpages.com/  mi app_______________
-//_________ http://marcodmapi.atwebpages.com/ mi bd _____________
-
-// %v9Eys].9hLj1?%Y pass bd
+//_________ https://trello.com/b/4o2BzD0t/proyecto _______
+//_________ http://marcodm.atwebpages.com/ _______________
 
 // ______________________ DUDAS__________________
 
     // EnDetalle: como puedo poner el fondo de de pantalla de cada peli con su propia foto ?
     // CSS: como puedo pasar props?
     // Componentes: como pasar props? puedo inventarmelo?
-    // Peliculas: ya no me carga las primeras dos veces, pero no se si es correcto
     // App: se pueden poner varios router ?
-    // donde cambio la llamada por genero? en el comp search o en el comp peliculas?
 
 // ______________________ FALLOS__________________
 
     // Solo me cargan las primeras 20 peliculas, y como no son suficientes no hay scroll y no puedo ver mas
-    // App: aunque ponga en orden de especificacion las rutas, me las coje todas
     // si relleno el form y lo envio se "reinicia" pero si le doy a enviar, se vuelven a cargar los datos
 
 // ______________________ MAS FUNCIONALIDAD__________________
 
-    // añadir el contacto para posibles emails
     // mejorar los mensajes de error
     // añadir todas las peliculas despues de las buscadas como sugerencia
-    // base de datos para los Sponsors
     // buscar un traductor
-    // zona de sponsors
-    // zona de categorias
     // capturar busquedas
-    // sessions para guardar registros
-    // templates con graficos y tablas
     // añadir actores y directores en EnDetalle
-    // manejo de sesiones para guardar registros y busquedas realizadas 
-    // registrar usuarios
-    // añadir mas buscados a lo mejor
     // boton de ordenado por: nota, vistas, buscadas..
-    // añadir formulario para los sponsors
-    // poner la foto de fondo de la pagina con la que este de moda ?
     // añadir botón de subir arriba cuando se hace scroll

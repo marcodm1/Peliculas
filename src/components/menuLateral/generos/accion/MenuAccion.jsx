@@ -1,4 +1,4 @@
-import React , { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { get } from '../../../../funciones/httpClient';
 import Peli from '../../../peli/Peli';
 import Spinner from '../../../spinner/Spinner';
@@ -16,15 +16,15 @@ const MenuAccion = () => {
   const search = query.get('search'); // es lo que has puesto en el buscador: venom
   const searchUrl = '/discover/movie/?with_genres=28&sort_by=vote_average.desc&vote_count.gte=1000&page=' + pagina;
 
-  useEffect(() => {        
+  useEffect(() => {
     get(searchUrl).then(data => { setPeliculas(data.results); });
-    setPagina(pagina => pagina +1); // no funciona bien con cada menu
+    setPagina(pagina => pagina + 1);
   }, [search]);
 
   const scroll = () => {
     get(searchUrl).then(data => {
       setPeliculas(prevPelis => prevPelis.concat(data.results));
-      setPagina(actual => actual +1);
+      setPagina(actual => actual + 1);
       setTieneMas(data.page < data.total_pages);
     });
   };
@@ -32,15 +32,15 @@ const MenuAccion = () => {
 
 
   return (
-    <InfiniteScroll 
-      dataLength={peliculas.length} 
-      hasMore={tieneMas} 
+    <InfiniteScroll
+      dataLength={peliculas.length}
+      hasMore={tieneMas}
       next={scroll}
-      loader={<Spinner/>}
+      loader={<Spinner />}
     >
       {/* <MenuOrden/> */}
       <ul className="stiloRejilla">
-        {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula}/> )}
+        {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula} />)}
       </ul>
     </InfiniteScroll>
   )
