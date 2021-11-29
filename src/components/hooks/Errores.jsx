@@ -1,28 +1,16 @@
 import Swal from "sweetalert2";
+import { useState } from "react";
 
-const Errores = () => {
-    // switch (props.error) {
-    //     case 'blanco': {
-    //         console.log(props.error)
-    //         Swal.fire({
-    //             title: 'Error!',
-    //             text: 'No ha escrito nada',
-    //             icon: 'error',
-    //         })
-    //         return;
-    //     }
-    //     case 'sinResultados': {
-    //         console.log(props.error)
-    //         Swal.fire({
-    //             title: 'Error!',
-    //             text: 'Sin resultados',
-    //             icon: 'error',
-    //         })
-    //         return;
-    //     }
-    // }
+const Errores = (props) => {
+    const [error] = useState(props.error);
     return (
-        <p>dddd</p>
+        <>
+            {Swal.fire({
+                title: 'Error!',
+                text: error,
+                icon: 'error',
+            })}
+        </>
     )
 }
 

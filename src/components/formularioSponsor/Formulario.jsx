@@ -2,7 +2,6 @@
 import Swal from 'sweetalert2';
 import { v4 } from 'uuid';
 import { useFormulario } from '../hooks/useFormulario';
-// import './Formulario.css';
 
 const Formulario = ({ agregarSponsor }) => { // aqui hacemos un destructuring para evitarno props.agregarSponsor, es una forma de activar un compnente desde el comp hijo
   const estadoInicial = {
@@ -38,8 +37,6 @@ const Formulario = ({ agregarSponsor }) => { // aqui hacemos un destructuring pa
 
     reset();
   }
-
-
 
   return (
     <>

@@ -2,7 +2,6 @@
     display:flex; /*pone al div como contenedor flex y a los hijos como flex item*/
     justify-content:center;
     border-radius: 15px;
-    opacity: 0.8;
     margin-top: 2%;
 }
 

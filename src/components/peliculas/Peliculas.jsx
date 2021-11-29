@@ -5,11 +5,8 @@ import Spinner from '../spinner/Spinner';
 import { useQuery } from '../hooks/useQuery';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Swal from 'sweetalert2';
-// import Errores from '../hooks/Errores';
 import './Peliculas.css';
-// import MenuOrden from '../menuOrden/MenuOrden';
 
-// no se si podre poner para que busque algo por cada letra introducida en el buscador
 const Peliculas = () => {
   const [peliculas, setPeliculas] = useState([]);
   const [pagina, setPagina] = useState(1);
@@ -20,13 +17,12 @@ const Peliculas = () => {
   const searchUrl = search ? '/search/movie?query=' + search + '&page=' + pagina : '/discover/movie?page=' + pagina;
 
   useEffect(() => {
-    // console.log(search)
     if (search === '') {
       Swal.fire({
         title: 'Error!',
         text: 'No ha escrito nada',
         icon: 'error',
-      })
+      });
     }
   }, [search]);
 
@@ -36,11 +32,12 @@ const Peliculas = () => {
         if (data.total_results === 0) {
           Swal.fire({
             title: 'Error!',
-            text: 'Sin resultados',
+            text: `Sin resultados en "${search}"`,
             icon: 'error',
           })
+        } else {
+          setPeliculas(data.results);
         }
-        setPeliculas(data.results);
       })
     setPagina(actual => actual + 1); // no se si esto es lo mas correcto, pero funciona
   }, [search]);
@@ -53,8 +50,6 @@ const Peliculas = () => {
     });
   };
 
-
-
   return (
     <InfiniteScroll
       dataLength={peliculas.length}
@@ -62,8 +57,6 @@ const Peliculas = () => {
       next={scroll}
       loader={<Spinner />}
     >
-      {/* <MenuOrden/> */}
-      {/* <div className="descripcionBúsqueda">Películas ordenadas de mayor a menor popularidad</div> */}
       <ul className="stiloRejilla">
         {peliculas.map((pelicula) => <Peli key={pelicula.id} pelicula={pelicula} />)}
       </ul>

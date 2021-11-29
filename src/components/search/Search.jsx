@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { FaSearch } from 'react-icons/fa';
 import { useQuery } from '../hooks/useQuery';
-import Swal from 'sweetalert2';
 import './Search.css';
 
 const Search = () => {

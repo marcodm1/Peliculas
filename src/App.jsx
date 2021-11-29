@@ -22,9 +22,7 @@ import MenuLateral from './components/menuLateral/MenuLateral';
 import ListaSponsors from './components/formularioSponsor/ListaSponsors';
 // sponsors
 import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
-// menuOrden
-// import MenuOrden from './components/menuOrden/MenuOrden';
-
+// css
 import './App.css';
 
 const App = () => {
@@ -44,8 +42,9 @@ const App = () => {
                         <MenuLateral />
                     </div>
                     <div className="zonaPeliculas">
-                        {/* <MenuOrden/> */}
                         <Route exact path='/pelicula/:peliId'> <EnDetalle /> </Route>
+                        <Route exact path='/pelicula/'><p>No ha introducido una ID de película</p></Route>
+                        {/* SALE UNA PAGINA DEL SERVIDOR DE ERROR CUANDO NO PONGO EL ID DE UNA PELÍCULA */}
                         <Route exact path='/accion'> <MenuAccion /> </Route>
                         <Route exact path='/animacion'> <MenuAnimacion /> </Route>
                         <Route exact path='/aventura'> <MenuAventura /> </Route>

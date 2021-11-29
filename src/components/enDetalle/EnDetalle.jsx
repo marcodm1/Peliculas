@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { get } from '../../funciones/httpClient';
 import Spinner from '../spinner/Spinner';
 import './enDetalle.css';
@@ -11,10 +12,11 @@ const EnDetalle = () => {
 
     useEffect(() => {
         setCargado(true);
-        get('/movie/' + peliId).then(data => {
-            setPelicula(data);
-            setCargado(false);
-        });
+        get('/movie/' + peliId)
+            .then(data => {
+                setPelicula(data);
+                setCargado(false);
+            });
     }, [peliId]);
 
     if (!pelicula) {
@@ -24,11 +26,11 @@ const EnDetalle = () => {
     if (cargado) {
         return <Spinner />;
     }
+
     const imgUrl = "https://image.tmdb.org/t/p/w500" + pelicula.poster_path;
     return (
         pelicula.genres ? (
             <>
-                {/* <div className="detallesPeli" style={{backgroundImage: `url(${imgUrl})`}}> */}
                 <div className="detallesPeli">
                     <img src={imgUrl} alt={pelicula.title} className="columna" />
                     <div className="descripcion">
@@ -41,8 +43,7 @@ const EnDetalle = () => {
                     </div>
                 </div>
             </>
-        ) :
-            <p>Error</p>
+        ) : <p>Película no encontrada</p>
     )
 }
 export default EnDetalle;
