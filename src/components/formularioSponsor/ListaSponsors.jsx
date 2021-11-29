@@ -1,8 +1,7 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Formulario from "./Formulario";
 import Sponsor from "./Sponsor";
-// __________________________________ dejo el video en el minut0 2:10:00
+// __________________________________ dejo el video en el los ultimos  11 minutos finales que creo que no es para nada
 const ListaSponsors = () => { // este es el componente padre que le da la lista de sponsors al hijo
 
   const [sponsors, setSponsors] = useState([]);

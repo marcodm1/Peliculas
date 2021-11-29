@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { v4 } from 'uuid';
 import { useFormulario } from '../hooks/useFormulario';
@@ -10,7 +10,7 @@ const Formulario = ({ agregarSponsor }) => { // aqui hacemos un destructuring pa
   };
 
   const [inputs, handleChange, reset] = useFormulario(estadoInicial); // este es mi hook personalizado
-  const { nombre } = inputs; // aqui destructuramos sponsor con las porpiedades qeu queramos
+  const { nombre } = inputs; // aqui destructuramos sponsor con las porpiedades que queramos
 
   const handleSubmit = (event) => {
     event.preventDefault();

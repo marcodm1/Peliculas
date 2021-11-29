@@ -25,9 +25,6 @@ import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
 // menuOrden
 // import MenuOrden from './components/menuOrden/MenuOrden';
 
-// errores
-// import ErrorLink from './components/errores/errorLink/ErrorLink';
-// import ErrorPeli from './components/errores/errorPeli/ErrorPeli';
 import './App.css';
 
 const App = () => {
@@ -62,9 +59,6 @@ const App = () => {
                         <Route exact path='/terror'> <MenuTerror /> </Route>
                         <Route exact path='/sponsors'> <ListaSponsors /> </Route>
                         <Route exact path='/'> <Peliculas /> </Route>
-                        {/* errores */}
-                        {/* <Route path='/pelicula/'><ErrorLink/> </Route>
-                        <Route path='/'><ErrorPeli/> </Route> */}
                     </div>
                     <div className="zonaSponsors">
                         <ZonaSponsors />
