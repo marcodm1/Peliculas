@@ -6,6 +6,7 @@ import Search from './components/search/Search';
 import Peliculas from './components/peliculas/Peliculas';
 import EnDetalle from './components/enDetalle/EnDetalle';
 // menu
+import Favoritos from './components/menuLateral/generos/favoritos/Favoritos';
 import MenuAccion from './components/menuLateral/generos/accion/MenuAccion';
 import MenuAnimacion from './components/menuLateral/generos/animacion/MenuAnimacion';
 import MenuAventura from './components/menuLateral/generos/aventura/MenuAventura';
@@ -19,7 +20,7 @@ import MenuMusical from './components/menuLateral/generos/musical/MenuMusical';
 import MenuTerror from './components/menuLateral/generos/terror/MenuTerror';
 import MenuLateral from './components/menuLateral/MenuLateral';
 // formulario
-import ListaSponsors from './components/formularioSponsor/ListaSponsors';
+import FormularioSponsor from './components/formularioSponsor/FormularioSponsor';
 // sponsors
 import ZonaSponsors from './components/zonaSponsors/ZonaSponsors';
 // css
@@ -45,6 +46,7 @@ const App = () => {
                         <Route exact path='/pelicula/:peliId'> <EnDetalle /> </Route>
                         <Route exact path='/pelicula/'><p>No ha introducido una ID de película</p></Route>
                         {/* SALE UNA PAGINA DEL SERVIDOR DE ERROR CUANDO NO PONGO EL ID DE UNA PELÍCULA */}
+                        <Route exact path='/favoritos'> <Favoritos /> </Route>
                         <Route exact path='/accion'> <MenuAccion /> </Route>
                         <Route exact path='/animacion'> <MenuAnimacion /> </Route>
                         <Route exact path='/aventura'> <MenuAventura /> </Route>
@@ -56,7 +58,7 @@ const App = () => {
                         <Route exact path='/misterio'> <MenuMisterio /> </Route>
                         <Route exact path='/musical'> <MenuMusical /> </Route>
                         <Route exact path='/terror'> <MenuTerror /> </Route>
-                        <Route exact path='/sponsors'> <ListaSponsors /> </Route>
+                        <Route exact path='/sponsors'> <FormularioSponsor /> </Route>
                         <Route exact path='/'> <Peliculas /> </Route>
                     </div>
                     <div className="zonaSponsors">

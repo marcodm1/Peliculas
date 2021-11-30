@@ -16,6 +16,7 @@ const Peliculas = () => {
   const search = query.get('search'); // es lo que has puesto en el buscador: venom
   const searchUrl = search ? '/search/movie?query=' + search + '&page=' + pagina : '/discover/movie?page=' + pagina;
 
+  // console.log(peliculas)
   useEffect(() => {
     if (search === '') {
       Swal.fire({

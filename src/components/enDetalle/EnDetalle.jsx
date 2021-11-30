@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Swal from 'sweetalert2';
 import { get } from '../../funciones/httpClient';
 import Spinner from '../spinner/Spinner';
 import './enDetalle.css';

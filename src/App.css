@@ -34,7 +34,7 @@ html {
 .elBody {
     display: flex;
     justify-content: space-between;
-    padding-top: 5%;
+    padding-top: 7%;
     background-color: #081229;
 }
 .zonaGeneros {
@@ -48,6 +48,56 @@ html {
     padding: 1%;
     margin-left: 15%;
     margin-right: 18.8%;
+    text-align: center;
+}
+.tituloFavoritos {
+    color: rgb(84, 194, 108);
+}
+
+.añadir {
+    height: 20px;
+    border-radius:5px;
+    font-size: 10px;
+    border: 1px solid rgb(84, 194, 108);
+}
+.botonEnvio{
+    background-color: rgb(228, 225, 73);
+}
+
+.campo {
+    height: 20px;
+    border-radius:5px;
+    font-size: 15px;
+    border: 1px solid rgb(84, 194, 108);
+    margin-top: 12px;
+}
+
+button {
+    border-radius:4px;
+    border: 1px solid rgb(58, 99, 67);
+
+}
+
+.favorito {
+    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
+.editar {
+    background-color:rgb(209, 156, 71);
+}
+
+.eliminar {
+    background-color:rgb(206, 78, 78);
+}
+
+.mensajeError {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: none;
 }
 .botonSubir {
     position: fixed;
@@ -85,10 +135,11 @@ html {
         position: fixed;
         left: 13%;
     }
-    .titulo {
+    /* .titulo {
+        color: rgb(58, 99, 67);
         left: 42%;
         top: 0.8%
-    }
+    } */
     .searchButton {
         margin-top: 6%;
         top: 10%;
@@ -101,6 +152,7 @@ html {
         display: inline-block;
         border: 2px solid rgb(58, 99, 67);
         border-radius: 10px;
+        
     }
     .botonEnvio {
         font-size: 15px;
@@ -180,6 +232,13 @@ html {
     .searchInput {
         height: 17px;
     }
+    .añadir {
+        height: 17px;
+        font-size: 8px;
+    }
+    button {
+        /* margin: top 3px; */
+    }
 }
 
 @media (max-width: 600px) {
@@ -207,6 +266,16 @@ html {
     }
     .searchButton {
         margin-top: 4%;
+    }
+    .tituloFavoritos {
+        margin-top: 7%;
+    }
+    .añadir {
+        height: 10px;
+        font-size: 7px;
+    }
+    button {
+        font-size: 7px;
     }
 }
 
@@ -244,5 +313,8 @@ html {
     }
     .searchButton {
         display: none;
+    }
+    .tituloFavoritos {
+        margin-top: 10%;
     }
 }

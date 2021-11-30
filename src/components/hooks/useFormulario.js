@@ -1,20 +1,24 @@
 import { useState } from "react";
 
 export const useFormulario = (initialState = {}) => { // creo un hook que inicia vacio {}
-        const [inputs, setInputs] = useState(initialState);
+    const [inputs, setInputs] = useState(initialState);
 
-        const handleChange = (e) => {
-                const { name, value, checked, type } = e.target;
+    const handleChange = (e) => {
+        const { type, name, value, checked } = e.target;
 
-                setInputs((old) => ({
-                        ...old,
-                        [name]: type === "checkbox" ? checked : value,
-                }));
-        };
+        // console.log(e);
+        // console.log(e.target);
 
-        const reset = () => {
-                setInputs(initialState);
-        };
 
-        return [inputs, handleChange, reset];
+        setInputs((old) => ({
+            ...old,
+            [name]: type === "checkbox" ? checked : value,
+        }));
+    };
+
+    const reset = () => {
+        setInputs(initialState);
+    };
+
+    return [inputs, handleChange, reset];
 };
