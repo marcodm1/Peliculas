@@ -18,13 +18,7 @@ export function getSponsors() {
   )
 }
 
-export function getGet() {
-  const persona = {
-    nombre: "Marco",
-    apellido: "Dominguez"
-  };
-  const obj = JSON.stringify(persona); //{"nombre":"Marco","apellido":"Dominguez"}
-
+export function getGet(obj) {
   return (
     fetch('API/test2.php?x=' + obj)
       .then((result) => result.json())

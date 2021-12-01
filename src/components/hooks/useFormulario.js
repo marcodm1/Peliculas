@@ -4,11 +4,8 @@ export const useFormulario = (initialState = {}) => { // creo un hook que inicia
     const [inputs, setInputs] = useState(initialState);
 
     const handleChange = (e) => {
+        console.log(e.target)
         const { type, name, value, checked } = e.target;
-
-        // console.log(e);
-        // console.log(e.target);
-
 
         setInputs((old) => ({
             ...old,

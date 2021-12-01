@@ -10,8 +10,6 @@ const Formulario = ({ agregarFavorito }) => { // aqui hacemos un destructuring p
   const [inputs, handleChange, reset] = useFormulario(estadoInicial); // este es mi hook personalizado
   const { nombre } = inputs; // aqui destructuramos sponsor con las porpiedades que queramos
 
-  // console.log(inputs); // {nombre: 'Pedro3', opcion: ''}
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
