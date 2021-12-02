@@ -18,9 +18,37 @@ export function getSponsors() {
   )
 }
 
-export function getGet(obj) {
-  return (
-    fetch('API/test2.php?x=' + obj)
-      .then((result) => result.json())
-  )
-}
+// export function enviarFormulario(objJson) {
+
+//   return (
+
+//     fetch('http://marcodm.atwebpages.com/API/test2.php?x=' + objJson)
+//       // hacer que la peticion dea POST
+//       .then((result) => result.json())
+//   )
+// }
+
+// export function enviarFormulario2(objJson) {
+//   const requestOptions = {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({ title: 'React POST Request Example' })
+// };
+//   return (
+//     fetch('https://reqres.in/api/posts', requestOptions)
+//     .then(response => response.json())
+//     .then(data => this.setState({ postId: data.id }))
+//   )
+// }
+
+// async componentDidMount() {
+//   // POST request using fetch with async/await
+//   const requestOptions = {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ title: 'React POST Request Example' })
+//   };
+//   const response = await fetch('https://reqres.in/api/posts', requestOptions);
+//   const data = await response.json();
+//   this.setState({ postId: data.id });
+// }

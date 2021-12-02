@@ -14,6 +14,10 @@ html {
     height: 7%;
     background-color: #081229; 
 }
+/* .searchInput { */
+    /* height: 20px;
+    font-size: 14px;
+} */
 .search {
     position: fixed;
     left: 16%;
@@ -132,6 +136,7 @@ ul {
     border: 1px solid white;
 }
 
+/*___________________________ media query 1250 _________________*/
 @media (max-width: 1250px) {
     h2 {
         font-size: 20px;
@@ -146,11 +151,6 @@ ul {
         position: fixed;
         left: 13%;
     }
-    /* .titulo {
-        color: rgb(58, 99, 67);
-        left: 42%;
-        top: 0.8%
-    } */
     .searchButton {
         margin-top: 6%;
         top: 10%;
@@ -170,6 +170,8 @@ ul {
         font-size: 20px;
     }
 }
+
+/*___________________________ media query 1050 _________________*/
 
 @media (max-width: 1050px) {
     .titulo {
@@ -212,6 +214,8 @@ ul {
 
 }
 
+/*___________________________ media query 800 _________________*/
+
 @media (max-width: 800px) {
     .search {
         position: fixed;
@@ -251,10 +255,9 @@ ul {
         height: 17px;
         font-size: 8px;
     }
-    button {
-        /* margin: top 3px; */
-    }
 }
+
+/*___________________________ media query 600 _________________*/
 
 @media (max-width: 600px) {
     .titulo {
@@ -294,7 +297,12 @@ ul {
     button {
         font-size: 7px;
     }
+    h2 {
+        font-size: 15px;
+    }
 }
+
+/*___________________________ media query 400 _________________*/
 
 @media (max-width: 400px) {
     .search {
