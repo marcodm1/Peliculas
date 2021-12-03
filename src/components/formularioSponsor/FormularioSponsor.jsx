@@ -25,7 +25,6 @@ const FormularioSponsor = () => {
     return (
         <>
             <h2 className="tituloFormulario"> Hazte sponsor!!</h2>
-
             <form onSubmit={handleSubmit(onsubmit)}>
                 {/* nombre de la empresa */}
                 <input type="text" className="area" placeholder='Nombre:' name="nombre"

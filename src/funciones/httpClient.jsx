@@ -18,6 +18,13 @@ export function getSponsors() {
   )
 }
 
+export function getPlataformas() {
+  return (
+    fetch("/API/plataformas.php")
+      .then((result) => result.json())
+  )
+}
+
 // export function enviarFormulario(objJson) {
 
 //   return (

@@ -25,6 +25,11 @@ strong {
     color: rgb(84, 194, 108);
 }
 
+.tablaP {
+    border:2px solid rgb(84, 194, 108);
+    border-radius: 5px;
+  }
+
 @media (max-width: 1250px) {
     strong {
         font-size: 20px;
@@ -48,7 +53,7 @@ strong {
         font-size: 14px;
     }
     p {
-        font-size: 12px;
+        font-size: 11px;
     }
     .detallesPeli {
         margin-left: 6%;
