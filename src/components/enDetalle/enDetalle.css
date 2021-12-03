@@ -30,6 +30,8 @@ strong {
     border-radius: 5px;
   }
 
+  /* ____________________--- */
+
 @media (max-width: 1250px) {
     strong {
         font-size: 20px;

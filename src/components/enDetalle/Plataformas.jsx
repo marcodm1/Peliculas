@@ -16,55 +16,24 @@ const Plataformas = (props) => {
 
   return (
     <>
-      {/* {console.log(Object.keys(peli))} */}
-      {/* {Object.keys(peli).map((valor) => (
-          <tr >
-            <td >{valor} </td>
-          </tr>
-        ))
-        } */}
+      <div className="tablaPlataformas" >
+        <table >
+          {pelicula.map(peli => Object.keys(peli).map((item, i) => (
+            <tr>
+              <td><p>{item}</p></td>
+            </tr>
+          )))}
+        </table>
 
-      {/* {claves.map(clave => (
-          <tr >
-            <td >{clave} </td>
-          </tr>
-        ))} */}
-      <table >
-        <tr>
-          <td><p>id</p></td>
-          <td><p>580489</p></td>
-        </tr>
-        <tr>
-          <td><p>Netflix</p></td>
-          <td><p>✅</p></td>
-        </tr>
-        <tr>
-          <td><p>HBO</p></td>
-          <td><p>&#10060;</p></td>
-        </tr>
-        <tr>
-          <td><p>Amazon Prime</p></td>
-          <td><p>✅</p></td>
-        </tr>
-        <tr>
-          <td><p>SkyTV</p></td>
-          <td><p>&#10060;</p></td>
-        </tr>
-        <tr>
-          <td><p>Movistar+</p></td>
-          <td><p>✅</p></td>
-        </tr>
-        <tr>
-          <td><p>Filmin</p></td>
-          <td><p>✅</p></td>
-        </tr>
-        <tr>
-          <td><p>Disney+</p></td>
-          <td><p>&#10060;</p></td>
-        </tr>
+        <table>
+          {pelicula.map(peli => Object.values(peli).map((item, i) => (
+            <tr>
+              <td><p>{item === '1' ? '✅' : '❌'}</p></td>
+            </tr>
+          )))}
+        </table>
 
-
-      </table>
+      </div>
 
     </>
   )

@@ -133,10 +133,14 @@ ul {
 .sponsorAnuncio:hover {
     border: 1px solid white;
 }
-table {
+.tablaPlataformas{
     margin-top: 1%;
     margin-left: 6%;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 170px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
+    gap: 10px; /*separacion de 5px entre elementos */
+    /* padding: 5px; */
+  }
 
 /*___________________________ media query 1250 _________________*/
 @media (max-width: 1250px) {
@@ -174,6 +178,14 @@ table {
     strong {
         font-size: 20px;
     }
+    .tablaPlataformas{
+        margin-top: 1%;
+        margin-left: 6%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 110px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
+        gap: 10px; /*separacion de 5px entre elementos */
+        /* padding: 5px; */
+      }
 }
 
 /*___________________________ media query 1050 _________________*/
@@ -314,7 +326,12 @@ table {
     }
     table {
         margin-top: 1%;
+        /* margin-left: 25%; */
+    }
+    .tablaPlataformas{
         margin-left: 25%;
+        grid-template-columns: repeat(auto-fill, 65px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
+        gap: 9px; /*separacion de 5px entre elementos */
     }
 }
 
@@ -363,5 +380,13 @@ table {
         width: 30%;
         padding: 4px;
         margin: 4px;
+    }
+    p {
+        font-size: 8px; 
+    }
+    .tablaPlataformas{
+        margin-left: 25%;
+        grid-template-columns: repeat(auto-fill, 44px); 
+        gap: 9px; 
     }
 }
