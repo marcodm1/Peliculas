@@ -2,6 +2,7 @@ import Swal from 'sweetalert2';
 import { v4 } from 'uuid';
 import { useFormulario } from '../../../hooks/useFormulario';
 import './Formulario';
+import './Favorito.css';
 
 const Formulario = ({ agregarFavorito }) => { // aqui hacemos un destructuring para evitarno props.agregarFavorito, es una forma de activar un compnente desde el comp hijo
   const estadoInicial = {
@@ -45,11 +46,14 @@ const Formulario = ({ agregarFavorito }) => { // aqui hacemos un destructuring p
 
   return (
     <>
-      <h2 className="tituloFormulario"> Lista de favoritos</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="nombre" placeholder="Título:" className="añadir" onChange={handleChange} value={nombre} /> {/* en onChange necesita la info del objeto anterior, porque si no me pisa las otras propiedades, y lo que hace es, traeme este objeto y si esta propiedad se actualzia, agregala*/}
-        <button type="submit" >Añadir</button>
-      </form>
+      <div className="tituloFormulario"> <h2>Lista de favoritos</h2></div>
+      <div className="formularioFavoritos">
+        <form onSubmit={handleSubmit}>
+          <input type="text" name="nombre" placeholder="Título:" className="campoFavorito" onChange={handleChange} value={nombre} /> {/* en onChange necesita la info del objeto anterior, porque si no me pisa las otras propiedades, y lo que hace es, traeme este objeto y si esta propiedad se actualzia, agregala*/}
+          <button type="submit" className="añadirFavorito">Añadir</button>
+        </form>
+      </div>
+
     </>
   )
 }

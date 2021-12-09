@@ -11,6 +11,7 @@ const Sponsors = () => {
 
     return (
         <>
+            <h2>Sponsors</h2>
             {sponsors.map(sponsor => <div className="zonaSponsor">{sponsor.nombreEmpresa}</div>)}
         </>
     );

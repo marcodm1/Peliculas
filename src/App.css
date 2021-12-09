@@ -6,18 +6,14 @@ html {
 /*________________________ encabezado _________________________ */
 .zonaEncabezado {
     position: fixed; 
-    /* right: 20%; */
     margin-top: -8px;
     margin-left: -7px;
     padding: 4px;
     width: 100%;
-    height: 7%;
+    height: 6%;
     background-color: #081229; 
 }
-/* .searchInput { */
-    /* height: 20px;
-    font-size: 14px;
-} */
+
 .search {
     position: fixed;
     left: 16%;
@@ -38,7 +34,7 @@ html {
 .elBody {
     display: flex;
     justify-content: space-between;
-    padding-top: 7%;
+    padding-top: 5%;
     background-color: #081229;
 }
 .zonaGeneros {
@@ -53,13 +49,25 @@ html {
     margin-left: 15%;
     margin-right: 18.8%;
 }
+
+.zonaFormulario {
+    margin-left: 5%;
+}
+
+form {
+    margin-left: 0%;
+}
+
+.parteForm {
+    margin-left: 30%;
+}
 .tituloFavoritos {
     color: rgb(84, 194, 108);
 }
 
 .area {
     font-size: 15px;
-    width: 45%;
+    width: 60%;
     padding: 9px;
     margin: 9px;
     display: inline-block;
@@ -73,9 +81,6 @@ html {
     font-size: 10px;
     border: 1px solid rgb(84, 194, 108);
 }
-.botonEnvio{
-    background-color: rgb(228, 225, 73);
-}
 
 .campo {
     height: 20px;
@@ -85,23 +90,11 @@ html {
     margin-top: 12px;
 }
 
-button {
+.botonEnvio {
     border-radius:4px;
     border: 1px solid rgb(58, 99, 67);
-
-}
-
-.favorito {
-    margin-bottom: 5px;
-    margin-top: 25px;
-}
-
-.editar {
-    background-color:rgb(209, 156, 71);
-}
-
-.eliminar {
-    background-color:rgb(206, 78, 78);
+    font-size: 17px;
+    margin-left: 25%;
 }
 
 .mensajeError {
@@ -111,6 +104,9 @@ button {
 }
 ul {
     list-style-type: none;
+}
+h2 {
+    color: rgb(84, 194, 108);
 }
 .botonSubir {
     position: fixed;
@@ -133,14 +129,15 @@ ul {
 .sponsorAnuncio:hover {
     border: 1px solid white;
 }
-.tablaPlataformas{
+.tablaPlataformas {
     margin-top: 1%;
     margin-left: 6%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 170px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
-    gap: 10px; /*separacion de 5px entre elementos */
-    /* padding: 5px; */
-  }
+    grid-template-columns: repeat(auto-fill, 120px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
+    gap: 0px; /*separacion de 5px entre elementos */
+}
+
+
 
 /*___________________________ media query 1250 _________________*/
 @media (max-width: 1250px) {
@@ -148,7 +145,7 @@ ul {
         font-size: 20px;
     }
     .elBody {
-        padding-top: 5%;
+        padding-top: 6%;
     }
     .zonaPeliculas {
         margin-left: 20%;
@@ -166,7 +163,6 @@ ul {
     }
     .area {
         font-size: 13px;
-        width: 40%;
         padding: 8px;
         margin: 8px;
     }
@@ -179,13 +175,12 @@ ul {
         font-size: 20px;
     }
     .tablaPlataformas{
-        margin-top: 1%;
-        margin-left: 6%;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 110px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
-        gap: 10px; /*separacion de 5px entre elementos */
-        /* padding: 5px; */
-      }
+        grid-template-columns: repeat(auto-fill, 100px); 
+        gap: 2px; 
+    }
+    .zonaSponsor {
+        padding: 17px;
+    }
 }
 
 /*___________________________ media query 1050 _________________*/
@@ -199,7 +194,7 @@ ul {
         font-size: 15px;
     }
     .elBody {
-        padding-top: 8%;
+        padding-top: 9%;
     }
     .zonaPeliculas {
         margin-left: 22%;
@@ -220,19 +215,27 @@ ul {
     }
     .searchButton {
         margin-top: 4.7%;
+        left: 97%;
     }
     .searchInput {
         height: 20px;
         font-size: 14px;
+        margin-left: 15%;
     }
     .area {
         font-size: 11px;
-        width: 35%;
         padding: 7px;
         margin: 7px;
     }
     strong {
-        font-size: 16px;
+        font-size: 13px;
+    }
+    .zonaSponsor {
+        padding: 15px;
+    }
+    .tablaPlataformas{
+        grid-template-columns: repeat(auto-fill, 80px); 
+        gap: 2px;
     }
 }
 
@@ -250,18 +253,16 @@ ul {
         top: 0.8%
     }
     .elBody {
-        padding-top: 9%;
+        padding-top: 10%;
     }
     .zonaPeliculas {
         margin-left: 18%;
     }
     .zonaSponsors {
-        /* font-size: 10px; */
         padding: 0;
     }
     .area {
         font-size: 10px;
-        width: 30%;
         padding: 6px;
         margin: 6px;
     }
@@ -278,7 +279,14 @@ ul {
         font-size: 8px;
     }
     strong {
-        font-size: 13px;
+        font-size: 9px;
+    }
+    .zonaSponsor {
+        padding: 13px;
+    }
+    .tablaPlataformas{
+        grid-template-columns: repeat(auto-fill, 60px); 
+        gap: 2px; 
     }
 }
 
@@ -289,7 +297,10 @@ ul {
         font-size: 20px;
     }
     .elBody {
-        padding-top: 12%;
+        margin-top: 10%;
+    }
+    .zonaEncabezado {
+        margin-top: -68px;
     }
     .searchInput {
         font-size: 10px;
@@ -297,12 +308,11 @@ ul {
     }
     .area {
         font-size: 9px;
-        width: 30%;
         padding: 5px;
         margin: 5px;
     }
     .botonEnvio {
-        font-size: 10px;
+        font-size: 8px;
         padding-right: 7px;
     }
     .zonaSponsor {
@@ -318,20 +328,28 @@ ul {
         height: 10px;
         font-size: 7px;
     }
-    button {
+    .botonEnvio {
         font-size: 7px;
     }
     h2 {
-        font-size: 15px;
+        font-size: 10px;
     }
     table {
         margin-top: 1%;
-        /* margin-left: 25%; */
     }
     .tablaPlataformas{
         margin-left: 25%;
-        grid-template-columns: repeat(auto-fill, 65px); /* ordena automatico en forma de columnas con un ancho de 200px cada columna */
-        gap: 9px; /*separacion de 5px entre elementos */
+        grid-template-columns: repeat(auto-fill, 65px);
+        gap: 9px;
+    }
+    .zonaSponsor {
+        padding: 8px;
+    }
+    .zonaGeneros {
+        margin-left: 0%;
+    }
+    .detallesPeli {
+        margin-top: 0%;
     }
 }
 
@@ -348,7 +366,7 @@ ul {
         top: 0.8%
     }
     .elBody {
-        padding-top: 23%;
+        padding-top: 15%;
     }
     .zonaGeneros {
         position: fixed;
@@ -377,7 +395,6 @@ ul {
     }
     .area {
         font-size: 8px;
-        width: 30%;
         padding: 4px;
         margin: 4px;
     }
@@ -388,5 +405,17 @@ ul {
         margin-left: 25%;
         grid-template-columns: repeat(auto-fill, 44px); 
         gap: 9px; 
+    }
+    .zonaSponsor {
+        padding: 3px;
+    }
+    .botonEnvio {
+        font-size: 6px;
+    }
+    strong {
+        font-size: 8px;
+    }
+    .detallesPeli {
+        margin-top: 10%;
     }
 }

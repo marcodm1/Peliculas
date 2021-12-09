@@ -8,6 +8,20 @@
     color: rgb(58, 99, 67);
 }
 
+@media (max-width: 1050px) {
+    .sponsors {
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .sponsors {
+        font-size: 16px;
+    }
+
+}
+
 @media (max-width: 400px) {
     .sponsors {
         font-size: 7px;

@@ -1,14 +1,12 @@
 .tituloMenu {
     margin-bottom: 6px;
-    font-size: 20px;
+    font-size: 19px;
 }
 .tituloMenu:hover {
 color: rgb(58, 99, 67);
 }
 
-h2 {
-    color: rgb(84, 194, 108);
-}
+
 
 @media (max-width: 1250px) {
     .tituloMenu {
@@ -19,7 +17,20 @@ h2 {
 
 @media (max-width: 1050px) {
     .tituloMenu {
-        font-size: 13px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .tituloMenu {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tituloMenu {
+        font-size: 10px;
     }
 
 }
