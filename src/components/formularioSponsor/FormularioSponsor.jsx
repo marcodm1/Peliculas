@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 // import { enviarFormulario } from "../../funciones/httpClient";
 
 const FormularioSponsor = () => {
     const [entradas, setEntradas] = useState([]);
     const { register, handleSubmit, formState: { errors } } = useForm();
+
+
 
     const onsubmit = (data, evento) => {
         setEntradas([
@@ -17,10 +20,21 @@ const FormularioSponsor = () => {
             body: JSON.stringify(formulario[0])
         };
         fetch('http://marcodm.atwebpages.com/API/test2.php', objHTTP)
-            .then(response => (
-                response.json(),
-                console.log(response.json())
-            ))
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    if (result.resultado) {
+                        Swal.fire({
+                            text: result.texto,
+                            icon: 'success',
+                        });
+                    } else {
+                        Swal.fire({
+                            text: 'Error, ha introducido un código ya existente.',
+                            icon: 'error',
+                        })
+                    }
+                })
         evento.target.reset();
     }
 
